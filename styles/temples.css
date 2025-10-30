@@ -51,6 +51,10 @@ main {
 
 h1 {
 	font-size: 2rem;
+    text-align: center;
+    color: #1a1919;
+    
+    
 }
   
 .container.container.stdlf {
