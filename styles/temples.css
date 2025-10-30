@@ -1,0 +1,95 @@
+body 
+    .roboto-thin {
+        font-family: "Roboto", sans-serif;
+        font-weight: 100;
+        font-style: normal;
+    }
+
+nav{
+    background-color:#36454f;;
+    margin: auto;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+}
+nav ul{
+    list-style-type: none;
+}
+nav a {
+    display: block;
+    color:  #fff;
+    text-align: center;
+    padding:1rem;
+    text-decoration: none;
+}
+nav a:hover{
+    text-decoration:underline double;
+}
+.active{
+    color: rgb(201, 201, 110)
+}
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+header {
+	background-color: #bbb;
+	display: grid;
+    grid-gap: 1rem;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 30px #333;
+}
+    
+header,
+main {
+	margin: 0 auto;
+}
+
+h1 {
+	font-size: 2rem;
+}
+  
+.container.container.stdlf {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 25px;
+    place-items: center;}
+
+.figure {background-color:#fff;}
+.hover:hover { width: 100%; height: auto; margin: .5rem;}
+figcaption {font-size: smaller;}
+
+section {
+    padding: 1rem; 
+    background-color: #fff; 
+    
+}
+.hamburger-menu {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.hamburger-icon {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #333; 
+}
+
+.close-icon {
+    font-size: 24px;
+    color: #333; 
+    margin-top: 10px;
+}
