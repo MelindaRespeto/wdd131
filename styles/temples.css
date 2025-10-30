@@ -3,6 +3,7 @@ body
         font-family: "Roboto", sans-serif;
         font-weight: 100;
         font-style: normal;
+       
     }
 
 nav{
@@ -47,6 +48,10 @@ header {
 header,
 main {
 	margin: 0 auto;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    
 }
 
 h1 {
@@ -56,12 +61,18 @@ h1 {
     
     
 }
+
   
+
 .container.container.stdlf {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 25px;
-    place-items: center;}
+    place-items: center;
+    
+   
+    
+}
 
 .figure {background-color:#fff;}
 .hover:hover { width: 100%; height: auto; margin: .5rem;}
