@@ -1,0 +1,44 @@
+@media (min-width: 740px){
+
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    nav{
+        justify-content: flex-end;
+        flex-direction: row;
+    }
+    nav a{
+        flex: 1 1 100%;
+
+    }
+    nav ul{ 
+        display:flex;
+        align-items: center;
+
+
+    }
+    nav ul li {
+		flex: 1 1 100%;
+	}
+    .hamburger-menu {
+        display: flex; 
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .hamburger-icon {
+        display: none; 
+    }
+
+    .close-icon {
+        display: block;
+    }
+}
+
+
+
+
+
+    
