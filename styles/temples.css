@@ -121,3 +121,8 @@ section {
   color: #0c0d0deb;
   margin-bottom: 1rem;
 }
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+}
