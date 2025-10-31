@@ -110,11 +110,9 @@ section {
 }
 .temple-gallery {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* two columns */
-  gap: 1.5rem;
-  padding: 2rem;
-  max-width: 900px;
-  margin: 0 auto;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 20px; /* space between columns */
+  padding: 10px;
 }
  h2 {
   grid-column: 1 / -1; 
