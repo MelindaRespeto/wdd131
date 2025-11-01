@@ -7,7 +7,8 @@ body
     }
 
 nav{
-    background-color:#465763;;
+    background-color: rgb(70, 87, 99);
+    color: rgb(255, 255, 255);
     margin: auto;
     max-width: 800px;
     display: flex;
@@ -27,7 +28,8 @@ nav a:hover{
     text-decoration:underline double;
 }
 .active{
-    color: rgb(201, 201, 110)
+    color: rgb(201, 201, 110);
+    background-color: rgb(70, 87, 99);
 }
 .hamburger-menu {
     display: none;
@@ -124,5 +126,6 @@ section {
 footer {
   text-align: center;
   padding: 10px;
-  background-color: #4e4f4fcc;
+  background-color: rgba(32, 33, 33, 0.8);
+  color: rgb(255, 255, 255);
 }
