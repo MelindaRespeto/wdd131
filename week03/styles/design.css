@@ -20,6 +20,7 @@ h1 {
 
 main {
 	display: grid;
+	background-color:#dceeff;
 }
 
 h2 {
@@ -32,14 +33,35 @@ article p {
 }
 
 .callout {
-	color: #777;
-	background-color: #702963;
+	color: #181a17f9;
+	background-color:#fffacd;
     padding: 1rem; /* adds space inside the box */
-    background-color: #f0f8ff; /* optional: light background to highlight it */
-    border: 1px solid #ccc; /* optional: gives a border */
+    background-color: #b68722; /* optional: light background to highlight it */
+    border: 1px solid #0f0d0d; /* optional: gives a border */
     border-radius: 8px; /* optional: smooth corners */
 }
 
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scrollText 10s linear infinite;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 
 
 footer {
