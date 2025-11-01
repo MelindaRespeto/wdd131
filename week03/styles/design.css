@@ -1,51 +1,34 @@
+/* ===== Global Styles ===== */
 body {
-	font-family: Roboto, helvetica, sans-serif;
+  font-family: Roboto, Helvetica, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
 }
 
+/* ===== Layout Containers ===== */
 header,
 main,
 footer {
-	max-width: 760px;
-	margin: 0 auto;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
-marquee {
-	padding: 1rem;
-	background-color: #eee;
-}
-
+/* ===== Header ===== */
 h1 {
-	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
 }
 
-main {
-	display: grid;
-	background-color:#dceeff;
-}
-
-h2 {
-	color: navy;
-	text-align: left;
-}
-
-article p {
-	text-align: justify;
-}
-
-.callout {
-	color: #181a17f9;
-	background-color:#fffacd;
-    padding: 1rem; /* adds space inside the box */
-    background-color: #b68722; /* optional: light background to highlight it */
-    border: 1px solid #0f0d0d; /* optional: gives a border */
-    border-radius: 8px; /* optional: smooth corners */
-}
-
+/* ===== Marquee ===== */
 .marquee {
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
   box-sizing: border-box;
+  background-color: #eee;
+  padding: 1rem;
 }
 
 .marquee span {
@@ -63,10 +46,61 @@ article p {
   }
 }
 
+/* ===== Main Content ===== */
+main {
+  display: grid;
+  background-color: #dceeff;
+  padding: 1rem;
+  gap: 1rem;
+}
 
+/* ===== Section Titles ===== */
+h2 {
+  color: navy;
+  text-align: left;
+  margin-top: 0;
+}
+
+/* ===== Paragraphs ===== */
+article p {
+  text-align: justify;
+  line-height: 1.6;
+}
+
+/* ===== Globe Section (Image + Text Alignment) ===== */
+.globe {
+  display: flex;
+  align-items: center;     /* Vertically center image and text */
+  justify-content: center; /* Center group horizontally */
+  gap: 20px;
+  margin: 0;
+}
+
+.globe img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.globe h2 {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+/* ===== Callout Box ===== */
+.callout {
+  color: #181a17;
+  background-color: #fffacd;
+  padding: 1rem;
+  border: 1px solid #0f0d0d;
+  border-radius: 8px;
+}
+
+/* ===== Footer ===== */
 footer {
-	margin-top: 1rem;
-	border-top: 1px solid rgba(0, 0, 0, 0.1);
-	font-size: smaller;
-	text-align: right;
+  margin-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: smaller;
+  text-align: right;
+  padding-top: 0.5rem;
 }
