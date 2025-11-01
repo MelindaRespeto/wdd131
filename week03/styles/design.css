@@ -2,7 +2,7 @@
 body {
   font-family: Roboto, Helvetica, sans-serif;
   background-color: #f8f9fa;
-  margin: 0;
+  margin: 10;
   padding: 0;
 }
 
@@ -52,7 +52,9 @@ main {
   background-color: #dceeff;
   padding: 1rem;
   gap: 1rem;
+  
 }
+
 
 /* ===== Section Titles ===== */
 h2 {
