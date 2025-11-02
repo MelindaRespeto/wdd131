@@ -1,133 +1,218 @@
-body 
-    .roboto-thin {
-        font-family: "Roboto", sans-serif;
-        font-weight: 100;
-        font-style: normal;
-       
-    }
+/* =======================================
+   Temple Album - Clean CSS
+   Author: Melinda P. Competente
+   ======================================= */
 
-nav{
-    background-color: rgb(70, 87, 99);
-    color: rgb(255, 255, 255);
-    margin: auto;
-    max-width: 800px;
-    display: flex;
-    flex-direction: column;
-}
-nav ul{
-    list-style-type: none;
-}
-nav a {
-    display: block;
-    color:  #fff;
-    text-align: center;
-    padding:1rem;
-    text-decoration: none;
-}
-nav a:hover{
-    text-decoration:underline double;
-    background-color: #050505;
-    color: #fff;
-}
-.active{
-    color: rgb(201, 201, 110);
-    background-color: rgb(70, 87, 99);
-}
-.hamburger-menu {
-    display: none;
-    cursor: pointer;
+/* ========== Global Styles ========== */
+:root {
+  --primary-bg: rgb(70, 87, 99);
+  --accent-color: rgb(201, 201, 110);
+  --text-light: #fff;
+  --text-dark: #1a1919;
+  --hover-bg: #050505;
+  --footer-bg: rgba(32, 33, 33, 0.8);
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  color: var(--text-dark);
+}
+
+/* ========== Header ========== */
 header {
-	background-color: #bbb;
-	display: grid;
-    grid-gap: 1rem;
-	align-items: center;
-	justify-content: center;
-	padding: 20px;
-	border: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0 30px #333;
-}
-    
-header,
-main {
-	margin: 0 auto;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    
+  background-color: #bbb;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 30px #333;
 }
 
 h1 {
-	font-size: 2rem;
-    text-align: center;
-    color: #1a1919;
-    
-    
+  font-size: 2rem;
+  color: var(--text-dark);
+  text-align: center;
+  margin: 0;
 }
 
-  
-
-.container.container.stdlf {
-    display: flex;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 25px;
-    place-items: center;
-    
-   
-    
+/* ========== Navigation ========== */
+nav {
+  background-color: var(--primary-bg);
+  color: var(--text-light);
+  max-width: 800px;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.figure {background-color:#fff;}
-.hover:hover { width: 100%; height: auto; margin: .5rem;}
-figcaption {font-size: smaller;}
-
-section {
-    padding: 1rem; 
-    background-color: #fff; 
-    
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
+
+nav li {
+  flex: 1 1 auto;
+}
+
+nav a {
+  display: block;
+  color: var(--text-light);
+  text-align: center;
+  padding: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  text-decoration: underline double;
+  background-color: var(--hover-bg);
+}
+
+nav a.active {
+  color: var(--accent-color);
+}
+
+/* ========== Hamburger Menu ========== */
 .hamburger-menu {
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
+  display: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  margin: 0.5rem;
 }
 
 .hamburger-icon {
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .bar {
-    width: 30px;
-    height: 3px;
-    background-color: #333; 
+  width: 30px;
+  height: 3px;
+  background-color: var(--text-light);
 }
 
 .close-icon {
-    font-size: 24px;
-    color: #333; 
-    margin-top: 10px;
+  font-size: 24px;
+  color: var(--text-light);
+  margin-top: 10px;
 }
+
+/* ========== Main Content ========== */
+main {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.container.stdlf {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  width: 100%;
+  max-width: 1200px;
+  place-items: center;
+}
+
+section {
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
 .temple-gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-  gap: 15px; /* space between columns */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
   padding: 5px;
 }
- h2 {
-  grid-column: 1 / -1; 
+
+h2 {
+  grid-column: 1 / -1;
   text-align: center;
   font-size: 1.8rem;
   color: #0c0d0deb;
   margin-bottom: 1rem;
 }
+
+/* ========== Figures ========== */
+figure {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+figure:hover {
+  transform: scale(1.03);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  padding: 0.5rem;
+}
+
+/* ========== Footer ========== */
 footer {
   text-align: center;
-  padding: 10px;
-  background-color: rgba(32, 33, 33, 0.8);
-  color: rgb(255, 255, 255);
+  padding: 1rem;
+  background-color: var(--footer-bg);
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--primary-bg);
+  }
+
+  nav.active ul {
+    display: flex;
+  }
+
+  .hamburger-menu {
+    display: block;
+    margin-left: auto;
+  }
+
+  .temple-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  nav a {
+    padding: 0.75rem;
+  }
 }
