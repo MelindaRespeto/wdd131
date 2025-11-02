@@ -19,7 +19,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f7f7f7;
-  color: var(--text-dark);
+  color: black;
 }
 
 /* ========== Header ========== */
@@ -27,7 +27,7 @@ header {
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
-  background-color: rgb(70, 87, 99); /* dark gray-blue */
+  background-color: black; /* dark gray-blue */
   color: rgb(255, 255, 255);
   padding: 1rem 2rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
@@ -70,15 +70,16 @@ nav a {
   padding: 1rem;
   text-decoration: none;
   transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: black;
 }
 
 nav a:hover {
   text-decoration: underline double;
-  background-color: var(--hover-bg);
+  background-color: black;
 }
 
 nav a.active 
-{color: rgb(255, 255, 160);
+{color:black;
   background-color: rgb(70, 87, 99);
 }
 
@@ -216,5 +217,6 @@ footer {
 
   nav a {
     padding: 0.75rem;
+    background-color: black;
   }
 }
