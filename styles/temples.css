@@ -1,5 +1,5 @@
 /* =======================================
-   Temple Album - Clean CSS
+
    Author: Melinda P. Competente
    ======================================= */
 
@@ -24,17 +24,18 @@ body {
 
 /* ========== Header ========== */
 header {
-  background-color: #bbb;
   display: grid;
-  place-items: center;
-  padding: 20px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 30px #333;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  background-color: rgb(70, 87, 99); /* dark gray-blue */
+  color: rgb(255, 255, 255);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
   font-size: 2rem;
-  color: var(--text-dark);
+  color: rgb(239, 233, 233);
   text-align: center;
   margin: 0;
 }
