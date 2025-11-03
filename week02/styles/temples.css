@@ -21,7 +21,9 @@ body {
   background-color: #f7f7f7;
   color: black;
 }
-
+a {
+  background-color: rgb(0, 139, 139);
+}
 /* ========== Header ========== */
 header {
   display: grid;
