@@ -21,13 +21,16 @@ body {
   background-color: #f7f7f7;
   color: black;
 }
+a {
+  background-color: rgb(0, 139, 139);
+}
 
 /* ========== Header ========== */
 header {
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
-  background-color: black; /* dark gray-blue */
+  background-color:  rgb(70, 87, 99); 
   color: rgb(255, 255, 255);
   padding: 1rem 2rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
