@@ -23,7 +23,7 @@ nav {
 /* Base link style */
 nav a {
   color: rgb(255, 255, 255);
-  background-color: rgba(255, 255, 255, 0.1); /* subtle translucent background for visibility */
+  background-color: darkcyan; /* subtle translucent background for visibility */
   text-decoration: none;
   padding: 0.6rem 1.2rem;
   border-radius: 8px;
