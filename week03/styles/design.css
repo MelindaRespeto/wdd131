@@ -69,26 +69,6 @@ article p {
   line-height: 1.6;
 }
 
-/* ===== Globe Section (Image + Text Alignment) ===== */
-.globe {
-  display: flex;
-  align-items: center;     /* Vertically center image and text */
-  justify-content: center; /* Center group horizontally */
-  gap: 20px;
-  margin: 0;
-}
-
-.globe img {
-  width: 200px;
-  height: auto;
-  border-radius: 8px;
-}
-
-.globe h2 {
-  font-size: 1.5em;
-  margin: 0;
-}
-
 /* ===== Callout Box ===== */
 .callout {
   color: #181a17;
