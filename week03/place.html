@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="description" content="Boracay, one of the top Islands in the Philippines, is popular for its beaches and blessed with a long stretch of powdery white sand, crystal clear and azure waters, and a stunning sunset. Boracay is the most iconic island in the Philippines and has won multiple awards in previous years.">
+    <title>WDD 131 - Boracay Philippines - Melinda Competente</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+    <meta name="author" content="Melinda Competente">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header1">
+        <h1 class="title">Boracay Philippines</h1>
+    </header>
+
+    <img src="styles/philippines-1800409_1280.jpg" alt="phil" class="pic3">
+    <main>
+
+        <img src="image/boracay.webp"
+     srcset="image/boracay.webp 320w,
+             image/boracay-480w.webp 480w,
+             image/boracay-800w.webp 800w"
+     sizes="(max-width: 600px) 320px,
+            (max-width: 1000px) 480px,
+            800px"
+     alt="Beautiful boracay" class="pic">
+
+        <div class="pic2_container">
+            <img src="styles/b" alt="oks" class="pic2">
+        </div>
+        <div class="div1">
+            <h2 class="Data">Data</h2>
+            <p>Area: 10.32 square kilometers</p>
+            <p>Population: 37,802</p>
+            <p>Barangay: Balabag, Manoc-Manoc, and Yapak</p>
+            <p>Language: English, Tagalog, and Aklanon</p>
+            <p>Currency: Philippine peso</p>
+            <p>Time Zone: Philippine Standard Time</p>
+            <p>Calling Code: 36</p>
+            <p>Internet ID: No specific internet ID</p>
+        </div>
+        <div class="div2">
+            <h2 class="weather">Weather</h2>
+            <img src="image/weather_clouds_sun_sunny_icon.svg" alt="error" class="cloud">
+            <p>Temperature: 84.2 Fahrenheit</p>
+            <p>Conditions: Warm and Breezy</p>
+            <p>Wind: 5 m/h</p>
+            <p>Wind Chill: 88.39 (sample)</p>
+        </div>
+    </main>
+    <footer>
+        <p>Melinda Competente © 2024 Caramoan, Philippines</p>
+        <p>© <span id="currentyear"></span> Copyright 2024</p>
+        <p>Last Modification: <span id="currentDate" class="date"></span></p>
+        <label for="temperature">Temperature (°F):</label>
+        <input type="number" id="temperature" placeholder="Enter temperature" required>
+        <label for="windSpeed">Wind Speed (mph):</label>
+        <input type="number" id="windSpeed" placeholder="Enter wind speed" required>
+        <button onclick="calculateWindChill()">Calculate Wind Chill</button>
+        <p id="result"></p>
+    </footer>
+</body>
+</html>

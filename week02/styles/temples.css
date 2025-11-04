@@ -175,7 +175,59 @@ img {
 figcaption {
   font-size: 0.9rem;
   padding: 0.5rem;
+
 }
+
+/* ====== Hamburger Menu (added) ====== */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.hamburger-menu span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: var(--text-light);
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Animated “X” when active */
+.hamburger-menu.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+.hamburger-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-menu.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* Show on small screens */
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: flex;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  nav.active ul {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-bg);
+  }
+}
+
 
 /* ========== Footer ========== */
 footer {
