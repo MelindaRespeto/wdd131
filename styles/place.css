@@ -58,14 +58,22 @@ header {
 .pic2_container {
   text-align: center;
   margin: 1rem 0;
+  text-align: center;
 }
 
 .pic2 {
   width: 90%;
   max-width: 500px;
   border-radius: 10px;
+  text-align: center;
   
   
+}
+
+.pic {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* ======== Data Section ======== */
@@ -88,6 +96,7 @@ header {
 
 .div1 p, .div2 p {
   margin-bottom: 0.4rem;
+  text-align: center;
 }
 
 /* ======== Weather Section ======== */

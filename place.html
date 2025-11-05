@@ -3,73 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Boracay, one of the top Islands in the Philippines, is famous for its white sand beaches, clear waters, and breathtaking sunsets.">
+  <meta name="description" content="Boracay, one of the top islands in the Philippines, is famous for its white sand beaches, clear waters, and breathtaking sunsets.">
   <meta name="author" content="Melinda Competente">
   <title>WDD 131 - Boracay Philippines - Melinda Competente</title>
   
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="styles/place.css">
   <link rel="stylesheet" href="styles/place-large.css">
+
+  <!-- Scripts -->
   <script src="scripts/place.js" defer></script>
 
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <header class="header1">
-    <h1 class="title">Boracay Philippines</h1>
+    <h1 class="title">Boracay, Philippines</h1>
   </header>
 
-  <img src="images/bora.webp" alt="Boracay beach view" class="pic3">
-
   <main>
-    <img 
-      src="images/bora.webp"
-      srcset="images/bora.webp 320w,
-              images/bora-480w.webp 480w,
-              images/bora-800w.webp 800w"
-      sizes="(max-width: 600px) 320px,
-             (max-width: 1000px) 480px,
-             800px"
-      alt="Beautiful Boracay Island" class="pic">
+    <!-- Responsive image -->
+    <figure>
+      <img 
+        src="images/bora.webp"
+        srcset="images/bora.webp 320w,
+                images/bora-480w.webp 480w,
+                images/bora-800w.webp 800w"
+        sizes="(max-width: 600px) 320px,
+               (max-width: 1000px) 480px,
+               800px"
+        alt="Beautiful Boracay Island" class="pic">
+      <figcaption>White sand beaches and crystal-clear waters of Boracay</figcaption>
+    </figure>
 
     <div class="pic2_container">
-      <img src="images/hero-na.jpg" alt="Boracay seashore" class="pic2">
+      <img src="images/bora.webp"
+       alt="Boracay seashore at sunrise" class="pic2">
     </div>
 
-    <div class="div1">
-      <h2 class="Data">Data</h2>
-      <p>Area: 10.32 square kilometers</p>
-      <p>Population: 37,802</p>
-      <p>Barangays: Balabag, Manoc-Manoc, and Yapak</p>
-      <p>Languages: English, Tagalog, and Aklanon</p>
-      <p>Currency: Philippine peso (₱)</p>
-      <p>Time Zone: Philippine Standard Time (UTC+8)</p>
-      <p>Calling Code: +63</p>
-      <p>Internet ID: .ph</p>
-    </div>
+    <section class="div1">
+      <h2>Data</h2>
+      <ul>
+        <li>Area: 10.32 square kilometers</li>
+        <li>Population: 37,802</li>
+        <li>Barangays: Balabag, Manoc-Manoc, and Yapak</li>
+        <li>Languages: English, Tagalog, and Aklanon</li>
+        <li>Currency: Philippine peso (₱)</li>
+        <li>Time Zone: Philippine Standard Time (UTC+8)</li>
+        <li>Calling Code: +63</li>
+        <li>Internet ID: .ph</li>
+      </ul>
+    </section>
 
-    <div class="div2">
-      <h2 class="weather">Weather</h2>
-      <img src="images/sunny.png" alt="Sunny weather icon" class="cloud">
+    <section class="div2">
+      <h2>Weather</h2>
+      <img src="images/sun-color-icon.png" alt="Sunny weather icon" class="cloud">
       <p>Temperature: 84.2°F</p>
       <p>Conditions: Warm and Breezy</p>
       <p>Wind: 5 mph</p>
-      <p>Wind Chill: 88.39 (sample)</p>
-    </div>
+      <p>Wind Chill: <span id="windChillValue">88.39</span> (sample)</p>
+    </section>
   </main>
 
   <footer>
-    <p>Melinda Competente © Caramoan, Philippines</p>
+    <p>Melinda Competente — Caramoan, Philippines</p>
     <p>© <span id="currentyear"></span> | Last Modification: <span id="currentDate" class="date"></span></p>
-    
-    <label for="temperature">Temperature (°F):</label>
-    <input type="number" id="temperature" placeholder="Enter temperature" required>
-    
-    <label for="windSpeed">Wind Speed (mph):</label>
-    <input type="number" id="windSpeed" placeholder="Enter wind speed" required>
-    
-    <button onclick="calculateWindChill()">Calculate Wind Chill</button>
+
+    <form id="windChillForm" onsubmit="event.preventDefault(); calculateWindChill();">
+      <label for="temperature">Temperature (°F):</label>
+      <input type="number" id="temperature" placeholder="Enter temperature" required>
+
+      <label for="windSpeed">Wind Speed (mph):</label>
+      <input type="number" id="windSpeed" placeholder="Enter wind speed" required>
+
+      <button type="submit">Calculate Wind Chill</button>
+    </form>
+
     <p id="result"></p>
   </footer>
 </body>
