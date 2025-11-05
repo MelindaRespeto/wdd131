@@ -1,89 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Boracay, one of the top islands in the Philippines, is famous for its white sand beaches, clear waters, and breathtaking sunsets.">
-  <meta name="author" content="Melinda Competente">
-  <title>WDD 131 - Boracay Philippines - Melinda Competente</title>
-  
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="styles/place.css">
-  <link rel="stylesheet" href="styles/place-large.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boracay Island</title>
+  <meta name="description" content="Discover Boracay — a paradise island in the Philippines famous for its beaches and tropical weather." />
 
-  <!-- Scripts -->
-  <script src="scripts/place.js" defer></script>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="css/place.css" />
+  <link rel="stylesheet" href="css/place-large.css" />
 </head>
 
 <body>
-  <header class="header1">
-    <h1 class="title">Boracay, Philippines</h1>
+  <!-- ========== NAVIGATION ========== -->
+  <header>
+    <nav class="navbar">
+      <div class="nav-brand">Boracay Bliss</div>
+      <div class="nav-toggle" id="nav-toggle">&#9776;</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#explore">Explore</a></li>
+        <li><a href="#weather">Weather</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main>
-    <!-- Responsive image -->
-    <figure>
-      <img 
-        src="images/bora.webp"
-        srcset="images/bora.webp 320w,
-                images/bora-480w.webp 480w,
-                images/bora-800w.webp 800w"
-        sizes="(max-width: 600px) 320px,
-               (max-width: 1000px) 480px,
-               800px"
-        alt="Beautiful Boracay Island" class="pic">
-      <figcaption>White sand beaches and crystal-clear waters of Boracay</figcaption>
-    </figure>
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero" id="home">
+    <picture>
+      <source media="(max-width: 600px)" srcset="images/boracay-480w.webp">
+      <source media="(max-width: 1000px)" srcset="images/boracay-800w.webp">
+      <img src="images/boracay-1200w.webp" alt="Beautiful Boracay Island" class="hero-img">
+    </picture>
 
-    <div class="pic2_container">
-      <img src="images/bora.webp"
-       alt="Boracay seashore at sunrise" class="pic2">
+    <div class="hero-text">
+      <h1>Welcome to Boracay</h1>
+      <p>White sand. Clear water. Endless sunshine.</p>
+      <a href="#explore" class="hero-btn">Explore Now</a>
     </div>
 
-    <section class="div1">
-      <h2>Data</h2>
-      <ul>
-        <li>Area: 10.32 square kilometers</li>
-        <li>Population: 37,802</li>
-        <li>Barangays: Balabag, Manoc-Manoc, and Yapak</li>
-        <li>Languages: English, Tagalog, and Aklanon</li>
-        <li>Currency: Philippine peso (₱)</li>
-        <li>Time Zone: Philippine Standard Time (UTC+8)</li>
-        <li>Calling Code: +63</li>
-        <li>Internet ID: .ph</li>
-      </ul>
-    </section>
+    <!-- Mobile weather icon -->
+    <div class="weather-icon-mobile">
+      <img src="images/weather-sunny.svg" alt="Sunny Weather Icon">
+    </div>
+  </section>
 
-    <section class="div2">
-      <h2>Weather</h2>
-      <img src="images/sun-color-icon.png" alt="Sunny weather icon" class="cloud">
-      <p>Temperature: 84.2°F</p>
-      <p>Conditions: Warm and Breezy</p>
-      <p>Wind: 5 mph</p>
-      <p>Wind Chill: <span id="windChillValue">88.39</span> (sample)</p>
-    </section>
+  <!-- ========== EXPLORE SECTION ========== -->
+  <main id="explore">
+    <h2>Discover the Island</h2>
+    <p>Boracay offers world-class beaches, exciting water activities, and breathtaking sunsets.</p>
   </main>
 
-  <footer>
-    <p>Melinda Competente — Caramoan, Philippines</p>
-    <p>© <span id="currentyear"></span> | Last Modification: <span id="currentDate" class="date"></span></p>
+  <!-- ========== WEATHER SECTION ========== -->
+  <section id="weather" class="weather-section">
+    <h2>Weather</h2>
+    <p>Temperature: <span id="temp">30</span>°C</p>
+    <p>Wind Speed: <span id="wind">10</span> km/h</p>
+    <p>Wind Chill: <span id="chill">--</span></p>
+  </section>
 
-    <form id="windChillForm" onsubmit="event.preventDefault(); calculateWindChill();">
-      <label for="temperature">Temperature (°F):</label>
-      <input type="number" id="temperature" placeholder="Enter temperature" required>
-
-      <label for="windSpeed">Wind Speed (mph):</label>
-      <input type="number" id="windSpeed" placeholder="Enter wind speed" required>
-
-      <button type="submit">Calculate Wind Chill</button>
-    </form>
-
-    <p id="result"></p>
+  <!-- ========== FOOTER ========== -->
+  <footer id="contact">
+    <p>&copy; <span id="year"></span> Boracay Bliss | Last Modified: <span id="lastModified"></span></p>
   </footer>
+
+  <!-- JavaScript -->
+  <script src="scripts/place.js"></script>
 </body>
 </html>
