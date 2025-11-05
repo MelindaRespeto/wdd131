@@ -3,73 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Boracay Island</title>
-  <meta name="description" content="Discover Boracay — a paradise island in the Philippines famous for its beaches and tropical weather." />
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
-
-  <!-- CSS Files -->
-  <link rel="stylesheet" href="styles/place.css" />
+  <title>Madagascar</title>
   <link rel="stylesheet" href="styles/place-large.css" />
-  <script src="scripts/place.js"></script>
+  <link rel="stylesheet" href="styles/place.css">
 </head>
-
 <body>
-  <!-- ========== NAVIGATION ========== -->
   <header>
-    <nav class="navbar">
-      <div class="nav-brand">Boracay Bliss</div>
-      <div class="nav-toggle" id="nav-toggle">&#9776;</div>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#explore">Explore</a></li>
-        <li><a href="#weather">Weather</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <h1>Boracay</h1>
   </header>
 
-  <!-- ========== HERO SECTION ========== -->
-  <section class="hero" id="home">
-    <picture>
-      <source media="(max-width: 600px)" srcset="images/boracay-480w.webp">
-      <source media="(max-width: 1000px)" srcset="images/boracay-800w.webp">
-      <img src="images/bora.webp" alt="Beautiful Boracay Island" class="hero-img">
-    </picture>
+  <main>
+    <section class="content">
+      <div class="data-box">
+        <h2>Data</h2>
+        <ul>
+          <li><strong>Area:</strong> 10.32sq km</li>
+          <li><strong>Population:</strong> 939,594,000</li>
+          <li><strong>Capital:</strong> Kalibo</li>
+          <li><strong>Languages:</strong> Aklanon, Aklan</li>
+          <li><strong>Currency:</strong> Philippine Peso</li>
+          <li><strong>Time Zone:</strong> UTC+8 (PHT)</li>
+          <li><strong>Calling Code:</strong> + 63</li>
+          <li><strong>Internet TLD:</strong> .ph.</li>
+        </ul>
+      </div>
 
-    <div class="hero-text">
-      <h1>Welcome to Boracay</h1>
-      <p>White sand. Clear water. Endless sunshine.</p>
-      <a href="#explore" class="hero-btn">Explore Now</a>
-    </div>
-
-    <!-- Mobile weather icon -->
-    <div class="weather-icon-mobile">
-      <img src="images/sunny.png" alt="Sunny Weather Icon">
-    </div>
-  </section>
-
-  <!-- ========== EXPLORE SECTION ========== -->
-  <main id="explore">
-    <h2>Discover the Island</h2>
-    <p>Boracay offers world-class beaches, exciting water activities, and breathtaking sunsets.</p>
+      <div class="image-box">
+        <img src="images/bora.webp" alt="White Sand in Boracay">
+        <div class="weather-box">
+          <h3>Weather</h3>
+          <img src="images/sunny.png" alt="Weather Icon">
+          <p><strong>Temperature:</strong> <span id="temp">10</span> °C</p>
+          <p><strong>Conditions:</strong> Partly Cloudy</p>
+          <p><strong>Wind:</strong> <span id="wind">15</span> km/h</p>
+          <p><strong>Wind Chill:</strong> <span id="windchill"></span></p>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- ========== WEATHER SECTION ========== -->
-  <section id="weather" class="weather-section">
-    <h2>Weather</h2>
-    <p>Temperature: <span id="temp">30</span>°C</p>
-    <p>Wind Speed: <span id="wind">10</span> km/h</p>
-    <p>Wind Chill: <span id="chill">--</span></p>
-  </section>
+  <section id="windchill-calculator">
+  <h2>Wind Chill Calculator</h2>
+  <label for="tempInput">Temperature (°F): </label>
+  <input type="number" id="tempInput" placeholder="Enter temperature">
 
-  <!-- ========== FOOTER ========== -->
-  <footer id="contact">
-    <p>&copy; <span id="year"></span> Boracay Bliss | Last Modified: <span id="lastModified"></span></p>
+  <label for="windInput">Wind Speed (mph): </label>
+  <input type="number" id="windInput" placeholder="Enter wind speed">
+
+  <button id="calcBtn">Calculate Wind Chill</button>
+
+  <p id="calcResult">Result: <span id="windChillResult">N/A</span></p>
+</section>
+
+
+
+  <footer>
+    <p>©<span id="year"></span> Melinda P. Competente 🌍 Boracay</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
   </footer>
 
-  <!-- JavaScript -->
   <script src="scripts/place.js"></script>
 </body>
 </html>

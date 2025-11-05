@@ -1,143 +1,56 @@
+
 /* =======================================
-   Author: Melinda P. Competente
-   File: place.css
-   Description: Base styles for Boracay page
+   📱 MOBILE LAYOUT (Screen ≤ 768px)
    ======================================= */
+@media screen and (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
 
-/* ======== Global Styles ======== */
-:root {
-  --primary-bg: rgb(70, 87, 99);
-  --accent-color: rgb(201, 201, 110);
-  --text-color: #222;
-  --light-bg: #f7f7f7;
-  --white: #fff;
+  .image-box {
+    width: 100%;
+  }
+
+  .image-box img {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .data-box {
+    width: 90%;
+    margin: 1rem auto;
+    border-left: none;
+    border-top: 5px solid var(--accent-color);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+
+  .data-box h2 {
+    background-color: transparent;
+    color: var(--text-color);
+    text-align: center;
+    border-bottom: 2px solid var(--accent-color);
+  }
+
+  .weather-box {
+    position: static;
+    margin: 1rem auto;
+    background-color: var(--white);
+    color: var(--text-color);
+    border-top: 5px solid var(--primary-color);
+    text-align: center;
+    width: 90%;
+  }
+
+  .weather-box h3 {
+    color: var(--text-color);
+    border-bottom: 2px solid var(--primary-color);
+    display: inline-block;
+    padding-bottom: 0.3rem;
+  }
+
+  .weather-box img {
+    width: 60px;
+  }
 }
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  background-color: var(--light-bg);
-  color: var(--text-color);
-  line-height: 1.6;
-}
-
-/* ======== Header ======== */
-header {
-  background-color: red;
-  color: var(--white);
-  text-align: center;
-  padding: 1rem;
-}
-
-.title {
-  font-size: 1.8rem;
-  letter-spacing: 1px;
-}
-
-/* ======== Main Images ======== */
-.pic3 {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Responsive Boracay photo */
-.pic {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin: 1rem 0;
-  display: block;
-}
-
-.pic2_container {
-  text-align: center;
-  margin: 1rem 0;
-  text-align: center;
-}
-
-.pic2 {
-  width: 90%;
-  max-width: 500px;
-  border-radius: 10px;
-  text-align: center;
-  
-  
-}
-
-.pic {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* ======== Data Section ======== */
-.div1, .div2 {
-  background-color:white;
-  border-radius: 10px;
-  padding: 1rem;
-  margin: 1rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  text-align: center;
-}
-
-.div1 h2, .div2 h2 {
-  color: black;
-  border-bottom: 2px solid var(--accent-color);
-  margin-bottom: 0.5rem;
-  padding-bottom: 0.3rem;
-  text-align: center;
-  background-color: red;
-}
-
-.div1 p, .div2 p {
-  margin-bottom: 0.4rem;
-  text-align: center;
-}
-
-/* ======== Weather Section ======== */
-.cloud {
-  width: 50px;
-  display: block;
-  margin: 0.5rem 0;
-}
-
-/* ======== Footer ======== */
-footer {
-  background-color: red;
-  color: var(--white);
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-}
-
-footer input {
-  margin: 0.3rem;
-  padding: 0.4rem;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-footer button {
-  background-color: var(--accent-color);
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  color: var(--text-color);
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-footer button:hover {
-  background-color: rgb(220, 220, 130);
-}
-
-footer p {
-  margin-top: 0.4rem;
-}
-
