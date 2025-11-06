@@ -31,7 +31,17 @@
       </div>
 
       <div class="image-box">
-        <img src="images/bora.webp" alt="White Sand in Boracay">
+        <img src="images/bora.webp"
+        srcset="
+               images/bora.webp 480w,   /* mobile */
+               images/bora.webp 800w,   /* tablet / small desktop */
+               images/bora.webp 1200w" /* large desktop */
+        sizes="(max-width: 600px) 480px,      /* mobile */
+               (max-width: 1024px) 800px,    /* tablet */
+               1200px"                       /* large desktop */ 
+        
+        alt="White Sand in Boracay">
+        
         <div class="weather-box">
           <h3>Weather</h3>
           <img src="images/sunny.png" alt="Weather Icon">
