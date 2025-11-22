@@ -1,109 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explore beautiful LDS temples in the Philippines with images, history, and inspiration shared by Melinda Competente.">
-  <meta name="author" content="Melinda P. Competente">
-  <title>TEMPLE ALBUM-WDD 131 - Dynamic Web Fundamentals - Melinda Competente</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Description of your website for SEO">
+    <title>Temple Album</title>
 
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="styles/temples.css">
-  <link rel="stylesheet" href="styles/temples-large.css">
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- LOAD temple data FIRST -->
+    <script src="scripts/temples.js"></script>
 
+    <!-- THEN load filter + display logic -->
+    <script src="scripts/filtered-temples.js" defer></script>
 
-  <script src="scripts/temples.js" defer></script>
-
- 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="author" content="Melinda Competente">
 </head>
 
-
 <body>
-  <header>
-    <h1>Temple Album</h1>
-    <nav>
-      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
-      <ul>
-        <li><a href="#" class="active">Home</a></li>
-        <li><a href="old.html">Old</a></li>
-        <li><a href="new.html">New</a></li>
-        <li><a href="large.html">Large</a></li>
-        <li><a href="small.html">Small</a></li>
-      </ul>
+    <header>
+        <h1>Temple Album</h1>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="old-temples.html">Old</a></li>
+                <li><a href="new-temples.html">New</a></li>
+                <li><a href="large-temples.html">Large</a></li>
+                <li><a href="small-temples.html">Small</a></li>
+            </ul>
+        </nav>
+    </header>
 
-      <div class="hamburger-menu">
-        <div class="hamburger-icon">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-        </div>
-        <div class="close-icon"></div>
-      </div>
-    </nav>
-  </header>
+    <main data-filter="home">
+        <h2>Home</h2>
 
-  <main>
-  <div class="container stdlf">
-    
-    <section class="temple-gallery">
-    <h2>Home</h2>
-    <figure>
-      <img src="images/philippines-temple.webp" alt="Manila Philippines Temple" loading="lazy" width="250" height="167">
-      <figcaption>Manila Philippines Temple</figcaption>
-    </figure>
+        <!-- JS will inject temple cards here -->
+        <div id="temple-container" class="container_stdlf"></div>
+    </main>
 
-    <figure>
-      <img src="images/philippines-temple.webp" alt="Cebu Philippines Temple" loading="lazy" width="250" height="167">
-      <figcaption>Cebu Philippines Temple</figcaption>
-    </figure>
+    <footer>
+        <p>&copy; <span id="currentYear"></span> | Last Modified: <span id="lastModified"></span></p>
+    </footer>
 
-    <figure>
-      <img src="images/philippines-temple.webp" alt="Baguio Philippines Temple" loading="lazy" width="250" height="167">
-      <figcaption>Baguio Philippines Temple</figcaption>
-    </figure>
-
-    <figure>
-      <img src="images/philippines-temple.webp" alt="Davao Philippines Temple" loading="lazy" width="250" height="167">
-      <figcaption>Davao Philippines Temple</figcaption>
-    </figure>
-
-    <figure>
-      <img src="images/philippines-temple.webp" alt="Old Cebu Philippines Temple" loading="lazy" width="250" height="167">
-      <figcaption>Old Cebu Philippines Temple</figcaption>
-    </figure>
-
-    <figure>
-      <img src="images/philippines-temple.webp" alt="Pampanga Philippines Temple" loading="lazy" width="250" height="167">
-      <figcaption>Pampanga Philippines Temple</figcaption>
-    </figure>
-
-    <figure>
-      <img src="images/philippines-temple.webp" alt="Bacolod Philippines Temple" loading="lazy" width="250" height="167">
-      <figcaption>Bacolod Philippines Temple</figcaption>
-    </figure>
-
-    <figure>
-      <img src="images/philippines-temple.webp" alt="Iloilo Philippines Temple" loading="lazy" width="250" height="167">
-      <figcaption>Iloilo Philippines Temple</figcaption>
-    </figure>
-
-    <figure>
-      <img src="images/philippines-temple.webp" alt="Cagayan Philippines Temple" loading="lazy" width="250" height="167">
-      <figcaption>Cagayan Philippines Temple</figcaption>
-    </figure>
-    </section>
-  </div>
-</main>
-
-
-  <footer>
-    <p>&copy; <span id="current-year"></span> Melinda P. Competente</p>
-    <p>Last Modified: <span id="last-modified"></span></p>
-  </footer>
 </body>
 </html>
