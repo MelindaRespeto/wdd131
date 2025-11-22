@@ -11,7 +11,6 @@
 
     <!-- LOAD temple data FIRST -->
     <script src="scripts/temples.js"></script>
-
     <!-- THEN load filter + display logic -->
     <script src="scripts/filtered-temples.js" defer></script>
 
@@ -34,10 +33,10 @@
             </ul>
         </nav>
     </header>
-
-    <main data-filter="home">
-        <h2>Home</h2>
-
+<main data-filter="home">
+  <h2>All Temples</h2>
+  <div id="temple-container"></div>
+</main>
         <!-- JS will inject temple cards here -->
         <div id="temple-container" class="container_stdlf"></div>
     </main>
