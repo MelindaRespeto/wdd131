@@ -20,7 +20,12 @@
   .image-box {
     width: 100%;
   }
-
+.weather-box img {
+  display: block;
+  width: 80px;     /* adjust size as needed */
+  height: auto;
+  margin: 0 auto;
+}
   .image-box img {
     width: 100%;
     border-radius: 0;
