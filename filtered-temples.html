@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Description of your website for SEO">
+    <meta name="description" content="Temple Album - Browse LDS Temples Worldwide">
     <title>Temple Album</title>
     <link rel="stylesheet" href="styles/filtered-temples.css">
     <link rel="stylesheet" href="styles/filtered-temples-large.css">
@@ -14,13 +14,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <meta name="author" content="Melinda Competente">
 </head>
-
 <body>
     <header>
         <h1>Temple Album</h1>
         <nav>
             <ul>
-                <li><a href="#" class="active">Home</a></li>
+                <li><a href="temples.html" class="active">Home</a></li>
                 <li><a href="old-temples.html">Old</a></li>
                 <li><a href="new-temples.html">New</a></li>
                 <li><a href="large-temples.html">Large</a></li>
@@ -29,37 +28,15 @@
         </nav>
     </header>
 
-    <main>
-        <main data-filter="old">
-  <h2>Temples Dedicated Before 1900</h2>
-  <div id="temple-container"></div>
-</main>
-
-<main data-filter="new">
-  <h2>Temples Dedicated After 2000</h2>
-  <div id="temple-container"></div>
-</main>
-
-<main data-filter="large">
-  <h2>Temples Larger Than 100,000 sq ft</h2>
-  <div id="temple-container"></div>
-</main>
-
-<main data-filter="small">
-  <h2>Temples Smaller Than 10,000 sq ft</h2>
-  <div id="temple-container"></div>
-</main>
-
-        <h2>Home</h2>
-
-        <!-- JS will inject the temple cards here -->
+    <!-- Main content: only ONE main tag per page -->
+    <main data-filter="home">
+        <h2>All Temples</h2>
         <div id="temple-container" class="container_stdlf"></div>
-
     </main>
 
     <footer>
         <p>&copy; <span id="currentYear"></span> | Last Modified: <span id="lastModified"></span></p>
     </footer>
-
 </body>
 </html>
+
