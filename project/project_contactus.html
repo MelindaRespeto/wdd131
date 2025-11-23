@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="../styles/project.css">
+
+    <style>
+        /* Inline page-specific CSS — optional */
+        #feedback {
+            background-color: antiquewhite;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: .5em;
+            display: none;
+        }
+        .moveDown {
+            margin-top: 3em;
+        }
+        #logo img {
+            width: 200px;
+            height: auto;
+            display: block;
+        }
+        #logo {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        #hero-msg h1 {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="topnav">
+            <a class="active" href="../Home.html">Home</a>
+            <a href="../form.html">Services</a>
+            <a class="contactbut" href="project_contactus.html">Contact</a>
+            <a href="project/siteplan.html">Site Plan</a>
+        </div>
+    </nav>
+
+    <!-- HEADER / LOGO + MESSAGE -->
+    <header id="logo">
+        <img src="../images/jomel.jpg" alt="People enjoying">
+
+        <section id="hero-msg">
+            <h1 class="home-title">Be Happy and Stay Physically Healthy</h1>
+            <h4>Make Memories with Mayon Volcano</h4>
+        </section>
+    </header>
+
+    <main>
+        <div id="feedback"></div>
+
+        <!-- CONTACT FORM -->
+        <form action="/my-handling-form-page" method="post">
+            <ul>
+                <li>
+                    <label for="name">Name:</label>
+                    <input class="name" type="text" id="name" name="user_name" required>
+                </li>
+
+                <li>
+                    <label for="mail">Email:</label>
+                    <input class="mail" type="email" id="mail" name="user_email" required>
+                </li>
+
+                <li>
+                    <label for="msg">Message:</label>
+                    <textarea class="msg" id="msg" name="user_message" required></textarea>
+                </li>
+            </ul>
+
+            <button type="submit">Send</button>
+        </form>
+
+        <script>
+            const feedbackElement = document.getElementById('feedback');
+            const formElement = document.forms[0];
+
+            formElement.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                feedbackElement.innerHTML = 
+                  'Hello ' + formElement.user_name.value + '! Thank you for your message. We will get back to you soon!';
+                
+                feedbackElement.style.display = "block";
+                document.body.classList.add('moveDown');
+            });
+        </script>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Melinda Competente, Philippines</p>
+        <p>Last modification: <span id="lastModified"></span></p>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                document.getElementById("currentYear").textContent = new Date().getFullYear();
+                document.getElementById("lastModified").textContent = new Date(document.lastModified).toLocaleString();
+            });
+        </script>
+    </footer>
+
+</body>
+</html>

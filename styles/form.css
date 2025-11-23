@@ -1,0 +1,140 @@
+body {
+    font-family: 'Roboto', 'Open Sans';
+    background-color: rgb(127, 130, 129);
+}
+
+.topnav2 {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.topnav2 a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 10px;
+}
+
+.topnav2 a:hover {
+    color: #d66666;
+}
+
+.topnav2 a.prod {
+    background-color: rgba(16, 232, 109);
+    color: white;
+}
+
+.header_1 {
+    background-color: rgb(33, 30, 32);
+    color: white;
+    text-align: center;
+    height: 60px;
+}
+
+.body_1 {
+    background-color: gray;
+    height: 1000px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.phil-product {
+    width: 300px;
+    border-radius: 6px;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+}
+
+
+.rating {
+    display: inline-block;
+    unicode-bidi: bidi-override;
+    color: #e0e0e0;
+    font-size: 30px;
+    height: 40px;
+    position: relative;
+    width: auto;
+}
+
+.rating .fa-star {
+    cursor: pointer;
+    float: left; 
+    transition: color 0.3s ease; 
+}
+
+.rating .fa-star:hover,
+.rating .fa-star:hover ~ .fa-star 
+{
+    color: #ffcf0f; 
+}
+
+.rating .fa-star.selected,
+.rating .fa-star.selected ~ .fa-star {
+color: #ffcf0f; 
+}
+
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+h2 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 10px;
+}
+
+input[type="date"] {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #91ee94;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/*  button css*/
+.button1 {
+    background-color: rgb(171, 168, 168);
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+footer {
+    background-color: rgb(174, 172, 172);
+    font-size: 10px;
+    height: 50px;
+    align-content: center;
+    text-align: center;
+}
+
+.infooter {
+    margin: 0px;
+}

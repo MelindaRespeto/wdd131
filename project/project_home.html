@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayon Volcano - Home</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/project-home.css">
+    <link rel="stylesheet" href="../styles/siteplan.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Page-specific CSS */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* NAVIGATION */
+        nav {
+            background-color: #118ab2;
+        }
+
+        .topnav {
+            display: flex;
+            justify-content: flex-start;
+            padding: 10px 20px;
+        }
+
+        .topnav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: 500;
+        }
+
+        .topnav a.active {
+            font-weight: 700;
+            text-decoration: underline;
+        }
+
+        /* HEADER / HERO */
+        header {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: #06d6a0;
+        }
+
+        .logo img {
+            width: 200px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        #hero-msg h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        #hero-msg p {
+            font-size: 1.1rem;
+            margin-top: 5px;
+        }
+
+        /* MAIN CONTENT */
+        main {
+            padding: 20px;
+        }
+
+        section.intro {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+
+        section.intro h2 {
+            margin-bottom: 15px;
+            color: #ef476f;
+        }
+
+        section.intro p {
+            line-height: 1.6;
+            color: #073b4c;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            background-color: #118ab2;
+            color: white;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="topnav">
+            <a class="active" href="project_home.html">Home</a>
+            <a href="../project/form.html">Services</a>
+            <a href="../project/project_contactus.html">Contact</a>
+            <a href="../project/siteplan.html">Site Plan</a>
+            <a href="../project/project_home.html">Home</a>
+        </div>
+    </nav>
+
+    <!-- HEADER / HERO -->
+    <header>
+        <a href="Home.html" class="logo">
+            <img src="../images/mylogo.jpg" alt="Mayon Volcano Logo">
+        </a>
+        <div id="hero-msg">
+            <h1>Welcome to Mayon Volcano</h1>
+            <p>Explore the beauty, history, and culture of one of the Philippines’ most iconic landmarks.</p>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <section class="intro">
+            <h2>About Mayon Volcano</h2>
+            <p>Mayon Volcano, located in the Bicol Region, is famous for its perfect cone shape. It is one of the most active volcanoes in the Philippines, with over 50 eruptions recorded since 1616. Despite its volcanic activity, Mayon remains a popular tourist destination offering scenic views, local culture, and adventure activities like ATV tours.</p>
+        </section>
+
+        <section class="highlights">
+            <h2>Tourist Highlights</h2>
+            <ul>
+                <li>Scenic viewpoints for photography</li>
+                <li>Hiking and trekking tours</li>
+                <li>Local festivals and cultural events</li>
+                <li>Nearby attractions in Albay</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Melinda Competente, Philippines</p>
+        <p>Last modification: <span id="lastModified"></span></p>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                document.getElementById("currentYear").textContent = new Date().getFullYear();
+                document.getElementById("lastModified").textContent = new Date(document.lastModified).toLocaleString();
+            });
+        </script>
+    </footer>
+
+</body>
+</html>

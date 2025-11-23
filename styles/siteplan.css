@@ -1,0 +1,97 @@
+
+
+
+
+
+body {
+    font-family: 'Roboto', 'Open Sans';
+    background-color: rgb(127, 130, 129);
+}
+
+
+header {
+    background-color: #666;
+    padding: 20px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    width: auto;
+}
+header {
+  padding: 10px 20px;
+}
+
+.logo img {
+  width: 100px;     /* recommended width */
+  height: auto;     /* keeps proportions correct */
+  max-height: 70px; /* recommended height limit */
+  display: block;
+}
+.p1 {
+    text-align: justify;
+}
+
+.p1::first-letter {
+    font-size: 15px;
+    font-weight: bold; 
+    float: left; 
+    margin-right: 5px; 
+    color: rgb(0, 255, 0);
+  }
+
+
+
+h1 {
+    font-size: larger;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 10px;
+}
+
+.topnav a:hover {
+    color: rgb(16, 232, 109);
+}
+
+.topnav a.site {
+    background-color: rgb(16, 232, 109);
+    color: white;
+}
+
+.img{
+    text-align: center;
+}
+
+.pics {
+    width: 250px;
+    height: 250px;
+}
+
+
+
+footer {
+    position: relative;
+    bottom: 1px;
+    background-color: #666;
+    padding: 10px;
+    text-align: center;
+    font-size: 15px;
+    color: white;
+    width: auto;
+    
+    
+}
+footer p{
+    font-size: 10px;
+}
