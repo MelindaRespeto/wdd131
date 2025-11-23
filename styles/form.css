@@ -1,8 +1,12 @@
+/* Global styles */
 body {
-    font-family: 'Roboto', 'Open Sans';
+    font-family: 'Roboto', 'Open Sans', sans-serif;
     background-color: rgb(127, 130, 129);
+    margin: 0;
+    padding: 0;
 }
 
+/* Navigation */
 .topnav2 {
     overflow: hidden;
     background-color: #333;
@@ -22,33 +26,38 @@ body {
 }
 
 .topnav2 a.prod {
-    background-color: rgba(16, 232, 109);
+    background-color: rgba(16, 232, 109, 1);
     color: white;
 }
 
+/* Header */
 .header_1 {
     background-color: rgb(33, 30, 32);
     color: white;
     text-align: center;
     height: 60px;
+    line-height: 60px; /* vertical center */
 }
 
+/* Body section */
 .body_1 {
     background-color: gray;
-    height: 1000px;
+    min-height: 1000px;
     padding: 10px;
     margin-top: 20px;
 }
 
+/* Product box */
 .phil-product {
     width: 300px;
     border-radius: 6px;
     padding: 8px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
-
+/* Rating stars */
 .rating {
     display: inline-block;
     unicode-bidi: bidi-override;
@@ -66,46 +75,77 @@ body {
 }
 
 .rating .fa-star:hover,
-.rating .fa-star:hover ~ .fa-star 
-{
+.rating .fa-star:hover ~ .fa-star {
     color: #ffcf0f; 
 }
 
 .rating .fa-star.selected,
 .rating .fa-star.selected ~ .fa-star {
-color: #ffcf0f; 
+    color: #ffcf0f; 
 }
 
-
+/* Form container */
 .container {
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 300px;
+    box-sizing: border-box;
 }
 
 h2 {
     text-align: center;
 }
 
+/* Forms */
 form {
     display: flex;
     flex-direction: column;
 }
 
 label {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    font-size: medium;
 }
 
+/* Input fields */
+/* Standard input style */
+input[type="text"],
 input[type="date"] {
+    width: 300px;          /* fixed visual width */
+    border-radius: 6px;
     padding: 8px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
     margin-bottom: 15px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 16px;       /* consistent text size */
 }
 
+/* Limit max characters for text inputs */
+input[type="text"] {
+    max-width: 300px;
+}
+
+/* Optional: make all buttons uniform */
+button {
+    width: 150px;          /* standard button width */
+    height: 40px;          /* standard button height */
+    padding: 10px 20px;
+    background-color: #91ee94;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Buttons */
 button {
     padding: 10px 20px;
     background-color: #91ee94;
@@ -113,28 +153,31 @@ button {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 button:hover {
     background-color: #45a049;
 }
 
-/*  button css*/
+/* Secondary button */
 .button1 {
     background-color: rgb(171, 168, 168);
     margin-top: 10px;
     border-radius: 4px;
+    color: black;
 }
 
+/* Footer */
 footer {
     background-color: rgb(174, 172, 172);
-    font-size: 10px;
+    font-size: 14px;
     height: 50px;
-    align-content: center;
     text-align: center;
+    line-height: 50px;
+    margin: 0;
 }
 
 .infooter {
-    margin: 0px;
+    margin: 0;
 }
