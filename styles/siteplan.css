@@ -1,8 +1,4 @@
 
-
-
-
-
 body {
     font-family: 'Roboto', 'Open Sans';
     background-color: rgb(127, 130, 129);
@@ -71,11 +67,13 @@ h1 {
 
 .img{
     text-align: center;
+    color: #2abc6e;
 }
 
 .pics {
     width: 250px;
     height: 250px;
+    
 }
 
 
