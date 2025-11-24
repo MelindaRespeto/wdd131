@@ -68,7 +68,7 @@ h4 {
 }
 
 /* Rating stars */
-..rating {
+.rating {
     direction: rtl; /* reverse the order so 5 stars is leftmost */
     unicode-bidi: bidi-override;
     font-size: 30px;
