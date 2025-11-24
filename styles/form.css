@@ -5,15 +5,13 @@ body {
     margin: 0;
     padding: 0;
 }
+
 h4 {
     display: block;
-    margin-block-start: 1.33em;
-    margin-block-end: 1.33em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+    margin: 1.33em 0;
     font-weight: bold;
     unicode-bidi: isolate;
-    font-size: 20p;
+    font-size: 20px; /* FIXED: '20p' → '20px' */
 }
 
 /* Navigation */
@@ -68,36 +66,34 @@ h4 {
 }
 
 /* Rating stars */
-/* ★★★★★ Clickable star rating system */
 .rating {
-    direction: rtl;               /* Reverse order so highest star is left side */
+    direction: rtl;
     unicode-bidi: bidi-override;
     font-size: 30px;
-    display: inline-flex;
+    display: flex;
+    justify-content: left;
     gap: 5px;
+    margin-top: 10px;
 }
 
 .rating input[type="radio"] {
-    display: none; /* Hide radio buttons */
+    display: none;
 }
 
 .rating label {
-    color: #e0e0e0;  /* Default: gray stars */
+    color: #e0e0e0;
     cursor: pointer;
     transition: color 0.25s ease;
 }
 
-/* Hover effect */
 .rating label:hover,
 .rating label:hover ~ label {
-    color: #ffcf0f; /* Yellow on hover */
+    color: #ffcf0f;
 }
 
-/* Selected star effect */
 .rating input[type="radio"]:checked ~ label {
-    color: #ffcf0f; /* Yellow when selected */
+    color: #ffcf0f;
 }
-
 
 /* Form container */
 .container {
@@ -125,28 +121,26 @@ label {
 }
 
 /* Input fields */
-/* Standard input style */
 input[type="text"],
 input[type="date"] {
-    width: 300px;          /* fixed visual width */
+    width: 300px;
     border-radius: 6px;
     padding: 9px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     box-sizing: border-box;
-    font-size: 16px;       /* consistent text size */
+    font-size: 16px;
     height: 35px;
 }
 
-/* Limit max characters for text inputs */
 input[type="text"] {
     max-width: 300px;
 }
 
-/* Optional: make all buttons uniform */
+/* Buttons (single clean version) */
 button {
-    width: 150px;          /* standard button width */
-    height: 40px;          /* standard button height */
+    width: 150px;
+    height: 40px;
     padding: 10px 20px;
     background-color: #91ee94;
     color: white;
@@ -155,21 +149,6 @@ button {
     cursor: pointer;
     font-size: 18px;
     margin-top: 10px;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-/* Buttons */
-button {
-    padding: 10px 20px;
-    background-color: #91ee94;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 18px;
 }
 
 button:hover {
@@ -179,21 +158,8 @@ button:hover {
 /* Secondary button */
 .button1 {
     background-color: rgb(171, 168, 168);
-    margin-top: 10px;
     border-radius: 4px;
     color: black;
 }
 
-/* Footer */
-footer {
-    background-color: rgb(174, 172, 172);
-    font-size: 14px;
-    height: 50px;
-    text-align: center;
-    line-height: 50px;
-    margin: 0;
-}
-
-.infooter {
-    margin: 0;
-}
+/* Foot*

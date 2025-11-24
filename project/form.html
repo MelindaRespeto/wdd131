@@ -12,17 +12,17 @@
     <link href="../styles/form.css" rel="stylesheet">
     <link href="../styles/project_large.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="project/project_home.css">
+    <link rel="stylesheet" href="project-home.css">
 </head>
 
 <body>
+
     <header>
         <div class="topnav2">
             <a class="active" href="../project/project_home.html">Home</a>
             <a class="prod" href="../project/form.html">Services</a>
             <a href="../project/project_contactus.html">Contact</a>
-            <a href="../project/siteplan.html">Site plan</a>
-           
+            <a href="../project/siteplan.html">Site Plan</a>
         </div>
     </header>
 
@@ -32,64 +32,95 @@
 
     <main>
         <div class="body_1">
-            <h4>Services Offered</h4>
-<form action="review.html" method="get">
-    <select class="phil-product" id="product" name="product" required>
-        <option value="" disabled selected>Select a Service ...</option>
-        <option value="AC">Accommodation</option>
-        <option value="D">Dining</option>
-        <option value="RA">Recreation and Activities</option>
-        <option value="E">Event and Conference Activities</option>
-        <option value="SW">Spa and Wellness</option>
-        <option value="K">Kids Clubs</option>
-        <option value="C">Concierge</option>
-        <option value="GS">Guest Services</option>
-        <option value="FP">Food Processor</option>
-        <option value="RS">Retail and Shops</option>
-        <option value="ES">Environmental and Cultural Services</option>
-        <option value="TS">Transportation Services</option>
-        <option value="LA">Local Area Shuttle</option>
-        <option value="PS">Pet Services</option>
-        <option value="Bike">Bicycle Rentals</option>
-        <option value="Transpo">Public Transportation Information</option>
-        <option value="Elec">Electric Vehicle Charging Stations</option>
-        <option value="P">Private Car Service</option>
-    </select>
-                
+
+            <form action="review.html" method="get">
+
+                <!-- Services Offered -->
+                <h4>Services Offered</h4>
+                <select class="phil-product" id="product" name="product" required>
+                    <option value="" disabled selected>Select a Service ...</option>
+                    <option value="AC">Accommodation</option>
+                    <option value="D">Dining</option>
+                    <option value="RA">Recreation and Activities</option>
+                    <option value="E">Event and Conference Activities</option>
+                    <option value="SW">Spa and Wellness</option>
+                    <option value="K">Kids Clubs</option>
+                    <option value="C">Concierge</option>
+                    <option value="GS">Guest Services</option>
+                    <option value="FP">Food Processor</option>
+                    <option value="RS">Retail and Shops</option>
+                    <option value="ES">Environmental and Cultural Services</option>
+                    <option value="TS">Transportation Services</option>
+                    <option value="LA">Local Area Shuttle</option>
+                    <option value="PS">Pet Services</option>
+                    <option value="Bike">Bicycle Rentals</option>
+                    <option value="Transpo">Public Transportation Information</option>
+                    <option value="Elec">Electric Vehicle Charging Stations</option>
+                    <option value="P">Private Car Service</option>
+                </select>
+
+                <!-- Overall Rating -->
+                <h4>Overall Rating</h4>
+                <div class="rating">
+                    <input type="radio" id="star5" name="rating" value="5" required>
+                    <label for="star5" class="fa fa-star"></label>
+
+                    <input type="radio" id="star4" name="rating" value="4">
+                    <label for="star4" class="fa fa-star"></label>
+
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3" class="fa fa-star"></label>
+
+                    <input type="radio" id="star2" name="rating" value="2">
+                    <label for="star2" class="fa fa-star"></label>
+
+                    <input type="radio" id="star1" name="rating" value="1">
+                    <label for="star1" class="fa fa-star"></label>
+                </div>
+
+                <!-- Date -->
                 <h4>Service Review</h4>
                 <input type="date" id="date" name="date" min="2022-01-01" max="2025-12-31" required>
 
+                <!-- Features -->
                 <h4>Which feature did you find useful in services offered? (Check all that apply)</h4>
-                <label for="option1"><input type="checkbox" id="option1" name="options" class="checkbox"> Location and Setting</label><br>
-                <label for="option2"><input type="checkbox" id="option2" name="options" class="checkbox"> Guest Experience</label><br>
-                <label for="option3"><input type="checkbox" id="option3" name="options" class="checkbox"> Performance</label><br>
-                <label for="option4"><input type="checkbox" id="option4" name="options" class="checkbox"> Facilities and Infrastructure</label><br>
 
+                <label><input type="checkbox" id="option1" name="options" class="checkbox"> Location and Setting</label><br>
+                <label><input type="checkbox" id="option2" name="options" class="checkbox"> Guest Experience</label><br>
+                <label><input type="checkbox" id="option3" name="options" class="checkbox"> Performance</label><br>
+                <label><input type="checkbox" id="option4" name="options" class="checkbox"> Facilities and Infrastructure</label><br>
+
+                <!-- Written Review -->
                 <h4>Written Review (Optional)</h4>
                 <textarea name="comment" id="comment" cols="30" rows="5" placeholder="Write your comment here..."></textarea>
 
+                <!-- Name -->
                 <h4>Your Name (Optional)</h4>
                 <label for="name">Full Name:</label>
                 <input type="text" id="name" name="name" maxlength="50" placeholder="Enter your name...">
+
                 <button type="submit" class="button1">Post review</button>
+
             </form>
+
         </div>
     </main>
 
     <footer>
-        <p>&copy; <span id="currentYear"></span> Copyright Melinda Competente Philippines</p>
+        <p>&copy; <span id="currentYear"></span> Copyright Melinda Competente
+            Philippines</p>
         <p class="infooter">Last modification: <span id="lastModified"></span></p>
-
-        <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var currentYear = new Date().getFullYear();
-        document.getElementById("currentYear").textContent = currentYear;
-
-        var lastModifiedDate = new Date(document.lastModified);
-        document.getElementById("lastModified").textContent = lastModifiedDate.toLocaleString();
-    });
-       </script>
     </footer>
-    </body>
-</html>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+            var lastModifiedDate = new Date(document.lastModified);
+            document.getElementById("lastModified").textContent =
+                lastModifiedDate.toLocaleString();
+        });
+    </script>
+
+</body>
+</html>
