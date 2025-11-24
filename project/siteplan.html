@@ -65,3 +65,18 @@
                     <img class="pics" src="../images/wireframe2.png" alt="Home Wireframe" width="200" height="150">
                     <figcaption>Wireframe for Home</figcaption>
                 </figure>
+<!-- FOOTER -->
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Melinda Competente, Philippines</p>
+        <p>Last modification: <span id="lastModified"></span></p>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                document.getElementById("currentYear").textContent = new Date().getFullYear();
+                document.getElementById("lastModified").textContent = new Date(document.lastModified).toLocaleString();
+            });
+        </script>
+    </footer>
+
+</body>
+</html>

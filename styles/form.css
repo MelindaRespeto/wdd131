@@ -161,3 +161,10 @@ button:hover {
     border-radius: 4px;
     color: black;
 }
+footer {
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 1rem 0;
+}
