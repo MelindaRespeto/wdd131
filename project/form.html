@@ -79,8 +79,7 @@
 
                 <h4>Your Name (Optional)</h4>
                 <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" maxlength="50" placeholder="Enter your name..." list="nameSuggestions">
-
+                <input type="text" id="name" name="name" maxlength="50" placeholder="Enter your name...">
                 <button type="submit" class="button1">Post review</button>
             </form>
         </div>
@@ -91,8 +90,12 @@
         <p class="infooter">Last modification: <span id="lastModified"></span></p>
 
         <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                var currentYear = new Date().getFullYear();
-                document.getElementById("currentYear").textContent = currentYear;
+    document.addEventListener("DOMContentLoaded", function() {
+        var currentYear = new Date().getFullYear();
+        document.getElementById("currentYear").textContent = currentYear;
 
-                var lastModifiedDate = new Date(document.lastModified);
+        var lastModifiedDate = new Date(document.lastModified);
+        document.getElementById("lastModified").textContent = lastModifiedDate.toLocaleString();
+    });
+</script>
+    </footer>
