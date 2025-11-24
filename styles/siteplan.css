@@ -75,7 +75,12 @@ h1 {
     height: 250px;
     
 }
-
+.p {
+    font-size: 15px;
+    text-align: center;
+    color: black;
+    justify-content: center;
+}
 
 
 footer {
