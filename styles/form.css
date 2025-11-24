@@ -68,31 +68,28 @@ h4 {
 }
 
 /* Rating stars */
-.rating {
-    display: inline-block;
+..rating {
+    direction: rtl; /* reverse the order so 5 stars is leftmost */
     unicode-bidi: bidi-override;
-    color: #e0e0e0;
     font-size: 30px;
-    height: 40px;
-    position: relative;
-    width: auto;
 }
 
-.rating .fa-star {
+.rating input[type="radio"] {
+    display: none; /* hide the actual radio buttons */
+}
+
+.rating label {
+    color: #e0e0e0; /* gray stars */
     cursor: pointer;
-    float: left; 
-    transition: color 0.3s ease; 
+    transition: color 0.3s;
 }
 
-.rating .fa-star:hover,
-.rating .fa-star:hover ~ .fa-star {
-    color: #ffcf0f; 
+.rating input[type="radio"]:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+    color: #ffcf0f; /* yellow stars when hovered or selected */
 }
 
-.rating .fa-star.selected,
-.rating .fa-star.selected ~ .fa-star {
-    color: #ffcf0f; 
-}
 
 /* Form container */
 .container {
