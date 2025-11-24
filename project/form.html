@@ -7,24 +7,25 @@
     <meta name="author" content="Melinda Competente">
     <title>Project_Service Review Form - Melinda P. Competente</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS links -->
     <link href="../styles/form.css" rel="stylesheet">
     <link href="../styles/project_large.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="project_contactus.html"rel= "html">
-    <link href="project/project_home.html"rel="html">
-    
+    <link rel="stylesheet" href="project/project_home.css">
 </head>
 
 <body>
     <header>
         <div class="topnav2">
             <a class="active" href="../project/project_home.html">Home</a>
-            <a class="prod" href="http://127.0.0.1:5500/form.html">Services</a>
+            <a class="prod" href="../project/form.html">Services</a>
             <a href="../project/project_contactus.html">Contact</a>
-            <a href="htsite_plan.html">Site plan</a>
-            <a class="thank-you" href="http://127.0.0.1:5500/review.html">Thank you</a>
+            <a href="../project/siteplan.html">Site plan</a>
+           
         </div>
     </header>
+
     <div class="header_1">
         <h1>Service Review</h1>
     </div>
@@ -64,9 +65,9 @@
                     <span class="fa fa-star"></span>
                 </div>
 
-                <h4>Service review</h4>
+                <h4>Service Review</h4>
                 <input type="date" id="date" name="date" min="2022-01-01" max="2025-12-31" required>
-                
+
                 <h4>Which feature did you find useful in services offered? (Check all that apply)</h4>
                 <label for="option1"><input type="checkbox" id="option1" name="options" class="checkbox"> Location and Setting</label><br>
                 <label for="option2"><input type="checkbox" id="option2" name="options" class="checkbox"> Guest Experience</label><br>
@@ -77,9 +78,9 @@
                 <textarea name="comment" id="comment" cols="30" rows="5" placeholder="Write your comment here..."></textarea>
 
                 <h4>Your Name (Optional)</h4>
-                <input type="text" id="name" name="name" placeholder="Enter your name..." list="nameSuggestions">
-                
-                
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" maxlength="50" placeholder="Enter your name..." list="nameSuggestions">
+
                 <button type="submit" class="button1">Post review</button>
             </form>
         </div>
@@ -88,19 +89,10 @@
     <footer>
         <p>&copy; <span id="currentYear"></span> Copyright Melinda Competente Philippines</p>
         <p class="infooter">Last modification: <span id="lastModified"></span></p>
-        
+
         <script>
             document.addEventListener("DOMContentLoaded", function() {
-                // Set current year in the footer
                 var currentYear = new Date().getFullYear();
                 document.getElementById("currentYear").textContent = currentYear;
 
-                // Get last modified date of the document
                 var lastModifiedDate = new Date(document.lastModified);
-                document.getElementById("lastModified").textContent = lastModifiedDate.toLocaleString();
-            });
-        </script>
-    </footer>
-</body>
-
-</html>
