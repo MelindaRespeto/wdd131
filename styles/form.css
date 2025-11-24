@@ -68,26 +68,34 @@ h4 {
 }
 
 /* Rating stars */
+/* ★★★★★ Clickable star rating system */
 .rating {
-    direction: rtl; /* reverse the order so 5 stars is leftmost */
+    direction: rtl;               /* Reverse order so highest star is left side */
     unicode-bidi: bidi-override;
     font-size: 30px;
+    display: inline-flex;
+    gap: 5px;
 }
 
 .rating input[type="radio"] {
-    display: none; /* hide the actual radio buttons */
+    display: none; /* Hide radio buttons */
 }
 
 .rating label {
-    color: #e0e0e0; /* gray stars */
+    color: #e0e0e0;  /* Default: gray stars */
     cursor: pointer;
-    transition: color 0.3s;
+    transition: color 0.25s ease;
 }
 
-.rating input[type="radio"]:checked ~ label,
+/* Hover effect */
 .rating label:hover,
 .rating label:hover ~ label {
-    color: #ffcf0f; /* yellow stars when hovered or selected */
+    color: #ffcf0f; /* Yellow on hover */
+}
+
+/* Selected star effect */
+.rating input[type="radio"]:checked ~ label {
+    color: #ffcf0f; /* Yellow when selected */
 }
 
 
