@@ -99,6 +99,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <!-- NAVIGATION -->
@@ -108,7 +109,6 @@
             <a href="../project/form.html">Services</a>
             <a href="../project/project_contactus.html">Contact</a>
             <a href="../project/siteplan.html">Site Plan</a>
-            
         </div>
     </nav>
 
@@ -117,6 +117,7 @@
         <a href="project_home.html" class="logo">
             <img src="../images/mylogo.jpg" alt="Mayon Volcano Logo">
         </a>
+
         <div id="hero-msg">
             <h1>Welcome to Mayon Volcano</h1>
             <p>Explore the beauty, history, and culture of one of the Philippines’ most iconic landmarks.</p>
@@ -125,9 +126,15 @@
 
     <!-- MAIN CONTENT -->
     <main>
+
         <section class="intro">
             <h2>About Mayon Volcano</h2>
-            <p>Mayon Volcano, located in the Bicol Region, is famous for its perfect cone shape. It is one of the most active volcanoes in the Philippines, with over 50 eruptions recorded since 1616. Despite its volcanic activity, Mayon remains a popular tourist destination offering scenic views, local culture, and adventure activities like ATV tours.</p>
+            <p>
+                Mayon Volcano, located in the Bicol Region, is famous for its perfect cone shape.
+                It is one of the most active volcanoes in the Philippines, with over 50 eruptions recorded since 1616.
+                Despite its volcanic activity, Mayon remains a popular tourist destination offering scenic views,
+                local culture, and adventure activities like ATV tours.
+            </p>
         </section>
 
         <section class="highlights">
@@ -139,6 +146,7 @@
                 <li>Nearby attractions in Albay</li>
             </ul>
         </section>
+
     </main>
 
     <!-- FOOTER -->
@@ -147,9 +155,10 @@
         <p>Last modification: <span id="lastModified"></span></p>
 
         <script>
-            document.addEventListener("DOMContentLoaded", function() {
+            document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById("currentYear").textContent = new Date().getFullYear();
-                document.getElementById("lastModified").textContent = new Date(document.lastModified).toLocaleString();
+                document.getElementById("lastModified").textContent =
+                    new Date(document.lastModified).toLocaleString();
             });
         </script>
     </footer>
