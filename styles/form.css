@@ -161,6 +161,13 @@ button:hover {
     border-radius: 4px;
     color: black;
 }
+.form-inline {
+    display: flex;         /* puts children in one line */
+    align-items: center;   /* vertically centers them */
+    gap: 10px;             /* space between label and input */
+    margin-bottom: 15px;   /* space between rows */
+}
+
 footer {
   background-color: var(--primary-color);
   color: var(--white);

@@ -71,7 +71,9 @@
 
 <!-- Overall Rating -->
 <h4>Overall Rating</h4>
+<div class="form-inline">
 <label>Rate the Service:</label>
+
     <div class="rating">
     <input type="radio" id="star5" name="rating" value="5" required>
     <label for="star5" class="fa fa-star"></label>
@@ -88,13 +90,15 @@
     <input type="radio" id="star1" name="rating" value="1" required>
     <label for="star1" class="fa fa-star"></label>
     </div>
-
+</div>
 
 
 <!-- Date -->
 <h4>Service Review Date</h4>
+<div class="form-inline">
 <label for="date">Date of Your Visit:</label>
 <input type="date" id="date" name="date" min="2022-01-01" max="2025-12-31" required>
+</div>
 
 <!-- Features -->
 <h4>Which feature did you find useful in the services offered? (Check all that apply)</h4>
@@ -126,9 +130,10 @@
 
 <!-- Name -->
 <h4>Your Name (Optional)</h4>
+<div class="form-inline">
 <label for="name">Full Name:</label>
 <input type="text" id="name" name="name" maxlength="50" placeholder="Enter your name...">
-
+</div>
 <button type="submit" class="button1">Post review</button>
  </form>
 </div>
