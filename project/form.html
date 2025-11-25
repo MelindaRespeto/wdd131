@@ -38,10 +38,11 @@
         <div class="body_1">
 
             <form action="review.html" method="get">
-            </form>
+            
      
                 <!-- Services Offered -->
 <h4>Services Offered</h4>
+<div class="form-inline">
 <label for="product">Choose a Service:</label>
 <select class="phil-product" id="product" name="product" required>
     <option value="" disabled selected>Select a Service ...</option>
@@ -63,13 +64,15 @@
     <option value="Transpo">Public Transportation Information</option>
     <option value="Elec">Electric Vehicle Charging Stations</option>
     <option value="P">Private Car Service</option>
+    
 </select>
+</div>
 
 
 <!-- Overall Rating -->
 <h4>Overall Rating</h4>
 <label>Rate the Service:</label>
-<div class="rating">
+    <div class="rating">
     <input type="radio" id="star5" name="rating" value="5" required>
     <label for="star5" class="fa fa-star"></label>
 
@@ -84,7 +87,9 @@
 
     <input type="radio" id="star1" name="rating" value="1" required>
     <label for="star1" class="fa fa-star"></label>
-</div>
+    </div>
+
+
 
 <!-- Date -->
 <h4>Service Review Date</h4>
@@ -125,6 +130,7 @@
 <input type="text" id="name" name="name" maxlength="50" placeholder="Enter your name...">
 
 <button type="submit" class="button1">Post review</button>
+ </form>
 </div>
 </main>
 <!-- FOOTER -->
