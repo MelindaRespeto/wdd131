@@ -6,12 +6,17 @@ body {
     padding: 0;
 }
 
+/* Headings */
+h2 {
+    text-align: center;
+}
+
 h4 {
     display: block;
     margin: 1.33em 0;
     font-weight: bold;
     unicode-bidi: isolate;
-    font-size: 20px; /* FIXED: '20p' → '20px' */
+    font-size: 20px;
 }
 
 /* Navigation */
@@ -44,7 +49,7 @@ h4 {
     color: white;
     text-align: center;
     height: 60px;
-    line-height: 60px;
+    line-height: 60px; /* vertical center */
 }
 
 /* Body section */
@@ -53,6 +58,16 @@ h4 {
     min-height: 1000px;
     padding: 10px;
     margin-top: 20px;
+}
+
+/* Form container */
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    box-sizing: border-box;
 }
 
 /* Product box */
@@ -71,7 +86,7 @@ h4 {
     unicode-bidi: bidi-override;
     font-size: 30px;
     display: flex;
-    justify-content: left;
+    justify-content: flex-start;
     gap: 5px;
     margin-top: 10px;
 }
@@ -95,20 +110,6 @@ h4 {
     color: #ffcf0f;
 }
 
-/* Form container */
-.container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    box-sizing: border-box;
-}
-
-h2 {
-    text-align: center;
-}
-
 /* Forms */
 form {
     display: flex;
@@ -124,17 +125,14 @@ label {
 input[type="text"],
 input[type="date"] {
     width: 300px;
+    max-width: 300px;
+    height: 35px;
     border-radius: 6px;
     padding: 9px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     box-sizing: border-box;
     font-size: 16px;
-    height: 35px;
-}
-
-input[type="text"] {
-    max-width: 300px;
 }
 
 /* Buttons */
@@ -161,17 +159,20 @@ button:hover {
     border-radius: 4px;
     color: black;
 }
+
+/* Inline form rows */
 .form-inline {
-    display: flex;         /* puts children in one line */
-    align-items: center;   /* vertically centers them */
-    gap: 10px;             /* space between label and input */
-    margin-bottom: 15px;   /* space between rows */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
 }
 
+/* Footer */
 footer {
-  background-color: var(--primary-color);
-  color: var(--white);
-  text-align: center;
-  font-size: 0.9rem;
-  padding: 1rem 0;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 1rem 0;
 }
