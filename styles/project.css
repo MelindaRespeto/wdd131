@@ -1,112 +1,100 @@
+/* Combined body styles */
+body {
+  font-family: roboto, open sans;
+  background-color: rgb(127, 130, 129);
+  background-image: url("../images/mayon1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #e9d7d7;
+}
 
-  body {
-    font-family: roboto, open sans;
-    background-color: rgb(127, 130, 129);
+/* Header */
+header {
+  background-color: #666;
+  padding: 20px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
 
-  }
-  
-  
-  header {
-    background-color: #666;
-    padding: 20px;
-    text-align: center;
-    font-size: 35px;
-    color: white;
-  }
-  .site-header {
+/* Site header layout */
+.site-header {
   display: flex;
-  justify-content: flex-start; /* align left */
-  align-items: flex-start;     /* align top */
+  justify-content: flex-start;
+  align-items: flex-start;
   padding: 10px 20px;
 }
 
+/* Logo */
 .logo img {
-  width: 200px;   /* adjust logo size */
+  width: 200px;
   height: auto;
   display: block;
 }
-  body {
-    background-image: url("../images/mayon1.jpg");
-    background-size: cover;        /* makes it fill the screen */
-    background-position: center;   /* centers the image */
-    background-repeat: no-repeat;  /* prevents repeating */
-    color: #e9d7d7;
-  }
-  .topnav {
-    overflow: hidden;
-    background-color: #333;
-    
+
+/* Navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
 }
 
 .topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 20px;
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
 }
 
 .topnav a:hover {
-    color: rgb(16, 232, 109);
+  color: rgb(16, 232, 109);
 }
 
 .topnav a.site {
-    background-color: rgb(16, 232, 109);
-    color: white;
+  background-color: rgb(16, 232, 109);
+  color: white;
 }
 
+/* Headings */
 h1 {
   font-size: 45px;
 }
 
-  nav ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  a {
-    text-decoration: none;
-  }
-  article {
-    float: left;
-    padding: 20px;
-    text-align: space around, justify;
-    text-justify: inter-word;
-  }
-  
-  img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    
-   
-  }
+/* UL reset */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
 
-  .h2 {
-    text-indent: 30px;
-    text-align:justify;
-    
-  }
-  .h1, .p{
-    text-align:justify;
-    text-justify: inter-word;
-   
-  }
-  <footer>
-    
-  <p>&copy; <span id="currentYear"></span> Copyright 2024 Melinda Competente Philippines</p>
-  <p>Last modification: <span id="lastModified"></span></p>
+/* Links */
+a {
+  text-decoration: none;
+}
 
-  <script>
-      document.addEventListener("DOMContentLoaded", function() {
-          // Set current year in the footer
-          var currentYear = new Date().getFullYear();
-          document.getElementById("currentYear").textContent = currentYear;
+/* Articles */
+article {
+  float: left;
+  padding: 20px;
+  text-align: justify;
+  text-justify: inter-word;
+}
 
-          // Get last modified date of the document
-          var lastModifiedDate = new Date(document.lastModified);
-          document.getElementById("lastModified").textContent = lastModifiedDate.toLocaleString();
-      });
-  </script>
-  
-</footer>
+/* Images */
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Text formatting */
+.h2 {
+  text-indent: 30px;
+  text-align: justify;
+}
+
+.h1, .p {
+  text-align: justify;
+  text-justify: inter-word;
+}
