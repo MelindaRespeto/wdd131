@@ -2,11 +2,12 @@
 body {
   font-family: roboto, open sans;
   background-color: rgb(127, 130, 129);
-  background-image: url("../images/mayon1.jpg");
+  background: rgb(127, 130, 129) url("../images/mayon1.jpg") center/cover no-repeat;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: #e9d7d7;
+  margin: 0;
 }
 
 /* Header */
@@ -14,7 +15,7 @@ header {
   background-color: #666;
   padding: 20px;
   text-align: center;
-  font-size: 35px;
+  font-size: 25px;
   color: white;
 }
 
@@ -28,7 +29,7 @@ header {
 
 /* Logo */
 .logo img {
-  width: 200px;
+  width: 150px;
   height: auto;
   display: block;
 }
@@ -47,7 +48,7 @@ header {
   text-decoration: none;
   font-size: 20px;
 }
-
+.topnav li { flex: 1; } /* equal-width nav buttons */
 .topnav a:hover {
   color: rgb(16, 232, 109);
 }
@@ -59,7 +60,7 @@ header {
 
 /* Headings */
 h1 {
-  font-size: 45px;
+  font-size: 40px;
 }
 
 /* UL reset */
@@ -99,4 +100,14 @@ img {
 .h1, .p {
   text-align: justify;
   text-justify: inter-word;
+}
+
+@media (max-width: 480px) {
+    #hero-msg h1 {
+        font-size: 1.5rem;
+    }
+
+    #hero-msg p {
+        font-size: 1rem;
+    }
 }
