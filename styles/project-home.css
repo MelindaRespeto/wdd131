@@ -95,6 +95,12 @@ main {
 
 .right-section li {
     margin-bottom: 8px;
+    list-style: disc;
+    margin: 0 auto;
+    padding-left: 30px;
+    max-width: 500px;
+    text-align: left;
+    margin-bottom: 10px; /* spacing between list items */
 }
 
 section.intro {
