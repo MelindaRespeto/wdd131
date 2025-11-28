@@ -82,6 +82,23 @@ main {
     margin: auto;
     text-align: center;
 }
+.main-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.left-section,
+.right-section {
+    flex: 1; /* each section takes 50% */
+    padding: 20px;
+    background: #eee;
+    border-radius: 10px;
+}
+.right-section li {
+    margin-bottom: 10px;  /* adjust the value as you like */
+   
+}
 
 section.intro {
     text-align: center;
