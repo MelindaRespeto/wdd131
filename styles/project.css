@@ -1,12 +1,8 @@
 /* Combined body styles */
 body {
-  font-family: roboto, open sans;
-  background-color: rgb(127, 130, 129);
+  font-family: 'Roboto', 'Open Sans', sans-serif;
   background: rgb(127, 130, 129) url("../images/mayon1.jpg") center/cover no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #e9d7d7;
+  color: hsl(0, 29%, 88%);
   margin: 0;
 }
 
@@ -25,6 +21,7 @@ header {
   justify-content: flex-start;
   align-items: flex-start;
   padding: 10px 20px;
+  flex-wrap: wrap; /* wrap on small screens */
 }
 
 /* Logo */
@@ -36,19 +33,27 @@ header {
 
 /* Navigation bar */
 .topnav {
-  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap; /* wrap nav links on small screens */
   background-color: #333;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.topnav li {
+  flex: 1; /* equal-width nav buttons */
 }
 
 .topnav a {
-  float: left;
-  color: #f2f2f2;
+  display: block;
   text-align: center;
   padding: 14px 16px;
+  color: #f2f2f2;
   text-decoration: none;
   font-size: 20px;
 }
-.topnav li { flex: 1; } /* equal-width nav buttons */
+
 .topnav a:hover {
   color: rgb(16, 232, 109);
 }
@@ -61,15 +66,21 @@ header {
 /* Headings */
 h1 {
   font-size: 40px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+h2 {
+  text-indent: 30px;
+  text-align: justify;
 }
 
 /* UL reset */
 nav ul {
   list-style-type: none;
   padding: 0;
- 
+  margin: 0;
 }
-
 
 /* Links */
 a {
@@ -78,7 +89,6 @@ a {
 
 /* Articles */
 article {
-  float: left;
   padding: 20px;
   text-align: justify;
   text-justify: inter-word;
@@ -91,23 +101,59 @@ img {
   margin-right: auto;
 }
 
-/* Text formatting */
-.h2 {
-  text-indent: 30px;
-  text-align: justify;
-}
-
-.h1, .p {
+/* Paragraphs */
+p {
   text-align: justify;
   text-justify: inter-word;
 }
 
-@media (max-width: 480px) {
-    #hero-msg h1 {
-        font-size: 1.5rem;
-    }
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  /* Make nav links full width */
+  .topnav li {
+    flex: 100%;
+  }
 
-    #hero-msg p {
-        font-size: 1rem;
-    }
+  .topnav a {
+    padding: 12px;
+    font-size: 18px;
+  }
+
+  /* Reduce header font size */
+  header {
+    font-size: 20px;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  article {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  #hero-msg h1 {
+    font-size: 1.5rem;
+  }
+
+  #hero-msg p {
+    font-size: 1rem;
+  }
+
+  .topnav a {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .site-header {
+    justify-content: center;
+    text-align: center;
+  }
 }
