@@ -1,4 +1,9 @@
 /* Global styles */
+:root {
+    --primary-color: #222; /* Dark for proper contrast */
+    --white: #ffffff;
+}
+
 body {
     font-family: 'Roboto', 'Open Sans', sans-serif;
     background-color: rgb(127, 130, 129);
@@ -49,7 +54,7 @@ h4 {
     color: white;
     text-align: center;
     height: 60px;
-    line-height: 60px; /* vertical center */
+    line-height: 60px;
 }
 
 /* Body section */
@@ -60,19 +65,10 @@ h4 {
     margin-top: 20px;
 }
 
-/* Form container */
-.container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    box-sizing: border-box;
-}
-
 /* Product box */
 .phil-product {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     border-radius: 6px;
     padding: 8px;
     margin-bottom: 15px;
@@ -120,13 +116,12 @@ form {
 label {
     margin-bottom: 5px;
     font-size: medium;
-    
 }
 
 /* Input fields */
 input[type="text"],
 input[type="date"] {
-    width: 300px;
+    width: 100%;
     max-width: 300px;
     height: 35px;
     border-radius: 6px;
@@ -160,21 +155,3 @@ button:hover {
     background-color: rgb(171, 168, 168);
     border-radius: 4px;
     color: black;
-}
-
-/* Inline form rows */
-.form-inline {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 15px;
-}
-
-/* Footer */
-footer {
-    background-color: var(--primary-color);
-    color: var(--white);
-    text-align: center;
-    font-size: 0.9rem;
-    padding: 1rem 0;
-}
