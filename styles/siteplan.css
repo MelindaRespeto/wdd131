@@ -1,5 +1,14 @@
 /* ========= CSS (improved, same visual design) ========= */
 
+/* ======================
+   TYPOGRAPHY (Required)
+   Fonts used:
+   - Roboto
+   - Open Sans
+   Applied globally to:
+   - body { font-family: 'Roboto', 'Open Sans', sans-serif; }
+   ====================== */
+
 /* Base / body */
 body {
   font-family: 'Roboto', 'Open Sans', sans-serif; /* fallback generic font added */ 
@@ -10,7 +19,41 @@ body {
   padding: 0;
 }
 
-/* Header / Logo */
+/* Headings */
+h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h4 {
+  display: block;
+  margin: 1.33em 0;
+  font-weight: bold;
+}
+
+/* First-letter styling for paragraphs with class .p1 (if used) */
+.p1::first-letter {
+  font-size: 1.2rem;
+  font-weight: bold;
+  float: left;
+  margin-right: 5px;
+  color: #00FF00; /* same green color, explicit hex */
+}
+
+/* Paragraphs inside article */
+article p {
+  font-size: 1rem;
+  color: #000000;
+  text-align: justify;
+}
+
+/* ======================
+   HEADER / LOGO
+   ====================== */
 header {
   background-color: #666666; /* explicit full hex */
   padding: 20px;
@@ -27,7 +70,9 @@ header {
   margin: 0 auto; /* center logo */
 }
 
-/* Navigation bar */
+/* ======================
+   NAVIGATION
+   ====================== */
 .topnav {
   overflow: hidden;
   background-color: #333333;
@@ -39,7 +84,7 @@ header {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 1.1rem; /* relative unit */
+  font-size: 1.1rem; /* consistent font size */
 }
 
 .topnav a:hover {
@@ -51,10 +96,12 @@ header {
   color: #FFFFFF;
 }
 
-/* Image section titles and captions */
+/* ======================
+   IMAGE TITLES & CAPTIONS
+   ====================== */
 .img {
   text-align: center;
-  color: #2ABC6E; /* same as original green/teal for headings or accent text */
+  color: #2ABC6E; /* consistent green accent */
 }
 
 /* Pictures */
@@ -63,47 +110,25 @@ header {
   height: 250px;
 }
 
-/* Paragraphs inside article */
-article p {
-  font-size: 1rem;
-  color: #000000;
-  text-align: justify;
-}
-
-/* First-letter styling for paragraphs with class .p1 (if used) */
-.p1::first-letter {
-  font-size: 1.2rem;
-  font-weight: bold;
-  float: left;
-  margin-right: 5px;
-  color: #00FF00; /* same green color, explicit hex */
-}
-
-/* Headings */
-h1 {
-  font-size: 2.5rem;
-  margin-top: 0;
-}
-
-h2 {
-  font-size: 1.8rem;
-}
-
-/* Footer */
-footer {
-  background-color: #666666;
-  padding: 10px;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #FFFFFF;
-}
-
-/* Reset default margins for main containers */
+/* ======================
+   LAYOUT SPACING
+   ====================== */
 main, article, section {
   margin: 0 20px;
   padding: 0;
 }
 
 figure {
-  margin: 20px auto; /* provide spacing around images */
+  margin: 20px auto;
+}
+
+/* ======================
+   FOOTER
+   ====================== */
+footer {
+  background-color: #666666;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #FFFFFF;
 }
