@@ -2,40 +2,47 @@
 <html lang="en">
 
 <head>
+    <!-- Character encoding -->
     <meta charset="utf-8">
+
+    <!-- Viewport for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Page description and author -->
     <meta name="description" content="Submit your review and rate the services including accommodations, dining, activities, and guest experiences.">
     <meta name="author" content="Melinda Competente">
+
+    <!-- Page title -->
     <title>Service Review Form - Melinda P. Competente</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <!-- CSS -->
+
+    <!-- CSS stylesheets -->
     <link href="../styles/form.css" rel="stylesheet">
     <link href="../styles/project_large.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="../styles/project-home.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- JavaScript -->
+    <!-- JavaScript (deferred for performance) -->
     <script defer>
-    // Save selected service for dynamic build + localStorage compliance
-    document.addEventListener("DOMContentLoaded", () => {
-        const select = document.getElementById("product");
-        const output = document.getElementById("productName");
+        // Save selected service for dynamic build + localStorage compliance
+        document.addEventListener("DOMContentLoaded", () => {
+            const select = document.getElementById("product");
+            const output = document.getElementById("productName");
 
-        // Load saved product
-        if (localStorage.getItem("product")) {
-            output.textContent = "Previously selected: " + localStorage.getItem("product");
-        }
+            // Load saved product
+            if (localStorage.getItem("product")) {
+                output.textContent = "Previously selected: " + localStorage.getItem("product");
+            }
 
-        // Save on change
-        select.addEventListener("change", () => {
-            const value = select.options[select.selectedIndex].text;
-            localStorage.setItem("product", value);
-            output.textContent = "Selected service: " + value;
+            // Save on change
+            select.addEventListener("change", () => {
+                const value = select.options[select.selectedIndex].text;
+                localStorage.setItem("product", value);
+                output.textContent = "Selected service: " + value;
+            });
         });
-    });
     </script>
-
 </head>
+
 
 <body>
 
