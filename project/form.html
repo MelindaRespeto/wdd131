@@ -138,7 +138,12 @@
     </footer>
 
     <script src="../scripts/project.js" defer></script>
-
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      document.getElementById("currentYear").textContent = new Date().getFullYear();
+      document.getElementById("lastModified").textContent = new Date(document.lastModified).toLocaleString();
+    });
+  </script>
 </body>
 
 </html>
