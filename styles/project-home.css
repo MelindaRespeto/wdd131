@@ -1,20 +1,19 @@
-/* ===== GENERAL STYLES ===== */
-* {
-    box-sizing: border-box;
+/* Page-specific CSS */
+body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #073b4c;
-    text-justify: auto;
-    background-image: url("../images/mayon1.jpg");
+.right-section li {
+    list-style: disc;
+    margin: 0 auto 10px auto;
+    padding-left: 30px;
+    max-width: 500px;
+    text-align: left;
 }
 
-/* ===== NAVIGATION ===== */
+/* NAVIGATION */
 nav {
     background-color: #118ab2;
 }
@@ -23,7 +22,6 @@ nav {
     display: flex;
     justify-content: flex-start;
     padding: 10px 20px;
-    flex-wrap: wrap;
 }
 
 .topnav a {
@@ -31,145 +29,62 @@ nav {
     text-decoration: none;
     margin-right: 20px;
     font-weight: 500;
-    transition: color 0.3s;
-}
-
-.topnav a:hover {
-    color: #ffd166;
 }
 
 .topnav a.active {
     font-weight: 700;
-    text-decoration: underline;
+    background-color: #118ab2;
 }
 
-/* ===== HEADER / HERO ===== */
+/* HEADER / HERO */
 header {
     display: flex;
     align-items: center;
     padding: 20px;
-    background-color: #06d6a0;
-    flex-wrap: wrap;
+    background-color: #118ab2;
 }
 
-header .logo img {
-    width: 150px;
+.logo img {
+    width: 200px;
     height: auto;
     margin-right: 20px;
 }
 
-#hero-msg {
-    flex: 1;
-}
-
 #hero-msg h1 {
+    margin: 0;
     font-size: 2rem;
-    margin-bottom: 10px;
 }
-   
 
 #hero-msg p {
     font-size: 1.1rem;
-    
+    margin-top: 5px;
 }
 
-/* ===== MAIN CONTENT ===== */
+/* MAIN CONTENT */
 main {
     padding: 20px;
-    max-width: 1000px;
+}
+
+section.intro {
+    max-width: 800px;
     margin: auto;
     text-align: center;
 }
 
-.main-container {
-    display: flex;
-    gap: 20px;
-    padding: 20px;
-}
-
-.left-section,
-.right-section {
-    flex: 1;
-    padding: 20px;
-    background: #eee;
-    border-radius: 10px;
-}
-
-.right-section li {
-    margin-bottom: 8px;
-    list-style: disc;
-    margin: 0 auto;
-    padding-left: 30px;
-    max-width: 500px;
-    text-align: left;
-    margin-bottom: 2px; /* spacing between list items */
-}
-
-section.intro {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
 section.intro h2 {
-    color: black;
     margin-bottom: 15px;
+    color: #ef476f;
 }
 
 section.intro p {
-    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #073b4c;
 }
 
-section.highlights h2 {
-    color: black;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-section.highlights ul {
-    list-style: disc;
-    margin: 0 auto;
-    padding-left: 30px;
-    max-width: 500px;
-    text-align: left;
-    margin-bottom: 10px; /* spacing between list items */
-}
-
-/* ===== FOOTER ===== */
+/* FOOTER */
 footer {
-    background-color: darkgreen;
-    color: white;
     text-align: center;
+    background-color: #118ab2;
+    color: white;
     padding: 15px;
-    margin-top: 40px;
-    font-size: 1rem;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    header .logo img {
-        margin: 0 0 15px 0;
-    }
-
-    .topnav {
-        justify-content: center;
-    }
-
-    section.highlights ul {
-        padding-left: 0;
-    }
-}
-
-@media (max-width: 480px) {
-    #hero-msg h1 {
-        font-size: 1.5rem;
-    }
-
-    #hero-msg p {
-        font-size: 1rem;
-    }
 }
