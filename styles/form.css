@@ -1,6 +1,8 @@
-/* Global styles */
+/* ============================
+   Global Styles
+============================ */
 :root {
-    --primary-color: #222; /* Dark for proper contrast */
+    --primary-color: #222;
     --white: #ffffff;
 }
 
@@ -11,7 +13,10 @@ body {
     padding: 0;
 }
 
-/* Headings */
+
+/* ============================
+   Headings
+============================ */
 h2 {
     text-align: center;
 }
@@ -24,7 +29,10 @@ h4 {
     font-size: 20px;
 }
 
-/* Navigation */
+
+/* ============================
+   Navigation
+============================ */
 .topnav2 {
     overflow: hidden;
     background-color: #333;
@@ -37,6 +45,7 @@ h4 {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 20px;
+    transition: color 0.2s ease;
 }
 
 .topnav2 a:hover {
@@ -48,7 +57,10 @@ h4 {
     color: white;
 }
 
-/* Header */
+
+/* ============================
+   Header Section
+============================ */
 .header_1 {
     background-color: rgb(33, 30, 32);
     color: white;
@@ -57,7 +69,10 @@ h4 {
     line-height: 60px;
 }
 
-/* Body section */
+
+/* ============================
+   Body Section
+============================ */
 .body_1 {
     background-color: gray;
     min-height: 1000px;
@@ -65,7 +80,10 @@ h4 {
     margin-top: 20px;
 }
 
-/* Product box */
+
+/* ============================
+   Dropdown (Product List)
+============================ */
 .phil-product {
     width: 100%;
     max-width: 300px;
@@ -76,7 +94,10 @@ h4 {
     box-sizing: border-box;
 }
 
-/* Rating stars */
+
+/* ============================
+   Rating Stars
+============================ */
 .rating {
     direction: rtl;
     unicode-bidi: bidi-override;
@@ -106,7 +127,10 @@ h4 {
     color: #ffcf0f;
 }
 
-/* Forms */
+
+/* ============================
+   Forms
+============================ */
 form {
     display: flex;
     flex-direction: column;
@@ -118,7 +142,10 @@ label {
     font-size: medium;
 }
 
-/* Input fields */
+
+/* ============================
+   Input Fields
+============================ */
 input[type="text"],
 input[type="date"] {
     width: 100%;
@@ -132,7 +159,10 @@ input[type="date"] {
     font-size: 16px;
 }
 
-/* Buttons */
+
+/* ============================
+   Buttons
+============================ */
 button {
     width: 150px;
     height: 40px;
@@ -144,14 +174,16 @@ button {
     cursor: pointer;
     font-size: 18px;
     margin-top: 10px;
+    transition: background-color 0.25s ease;
 }
 
 button:hover {
     background-color: #45a049;
 }
 
-/* Secondary button */
+/* Secondary Gray Button */
 .button1 {
     background-color: rgb(171, 168, 168);
-    border-radius: 4px;
+    border-radius: 8px;
     color: black;
+}
