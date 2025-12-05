@@ -22,7 +22,7 @@ header {
 }
 
 /* ========== Default Desktop Layout ========== */
-.content {
+content {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -97,8 +97,8 @@ footer {
 
 /* ========== Logo Image ========== */
 .logo img {
-  width: 100px;        /* recommended width */
-  height: auto;        /* keeps proportions correct */
-  max-height: 70px;    /* recommended height limit */
+  width: 100px;       /* recommended width */
+  height: auto;       /* keeps proportions correct */
+  max-height: 70px;   /* recommended height limit */
   display: block;
 }
