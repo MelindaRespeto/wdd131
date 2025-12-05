@@ -141,6 +141,9 @@ label {
     margin-bottom: 5px;
     font-size: medium;
 }
+#productName {
+    font-weight: bold;
+}
 
 /* ============================
    Input Fields
