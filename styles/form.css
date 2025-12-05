@@ -200,3 +200,10 @@ button:hover {
     white-space: nowrap;
     border: 0;
 }
+footer {
+  background-color: #666666;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #FFFFFF;
+}
