@@ -57,10 +57,12 @@ header {
 .image-box {
   position: relative;
 }
+
 .weather-box img {
   display: none;
 }
-.image{
+
+.image {
   width: 600px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
@@ -91,4 +93,12 @@ footer {
   text-align: center;
   font-size: 0.9rem;
   padding: 1rem 0;
+}
+
+/* ========== Logo Image ========== */
+.logo img {
+  width: 100px;        /* recommended width */
+  height: auto;        /* keeps proportions correct */
+  max-height: 70px;    /* recommended height limit */
+  display: block;
 }
