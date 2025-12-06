@@ -102,7 +102,7 @@ h4 {
 .rating {
     direction: rtl;
     unicode-bidi: bidi-override;
-    font-size: 30px;
+    font-size: 25px;
     display: flex;
     justify-content:left;
     gap: 5px;
@@ -110,6 +110,8 @@ h4 {
     align-items: center;
     gap: 10px;
     border: none;
+    margin: 0%;
+    padding-left: 0px;
     
 }
 
@@ -121,6 +123,7 @@ h4 {
     color: #e0e0e0;
     cursor: pointer;
     transition: color 0.25s ease;
+    margin-left: 0%;
 }
 
 .rating label:hover,
