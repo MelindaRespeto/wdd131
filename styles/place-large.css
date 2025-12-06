@@ -96,9 +96,13 @@ footer {
 }
 
 /* ========== Logo Image ========== */
+/* recommended width */
+/* keeps proportions correct */
+/* recommended height limit */
+
 .logo img {
-  width: 100px;       /* recommended width */
-  height: auto;       /* keeps proportions correct */
-  max-height: 70px;   /* recommended height limit */
+  width: 100px;       
+  height: auto;       
+  max-height: 70px;  
   display: block;
 }
