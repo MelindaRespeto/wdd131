@@ -1,102 +1,186 @@
-body {
-    background-color: #d0d5d9;
-    font-family: Arial, sans-serif;
+/* ============================
+   Global Styles
+============================ */
+:root {
+    --primary-color: #222;
+    --secondary-color: #c8102e;
+    --bg-color: #d0d5d9;
+    --form-bg-color: #e2e2ed;
+    --input-bg: #fff;
+    --input-border: #ccc;
+    --input-focus-border: var(--secondary-color);
+    --text-color: #000;
+    --optional-color: #555;
+}
+
+* {
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     padding: 20px;
 }
 
+/* ============================
+   Form Container
+============================ */
 .form-container {
-    width: 350px;
-    margin: auto;
-    background-color: #e2e2ed;
+    width: 100%;
+    max-width: 400px;
+    margin: 40px auto;
+    background-color: var(--form-bg-color);
     padding: 20px;
-    border-radius: 6px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .form-title {
     text-align: center;
-    background-color: #111;
-    color: white;
-    padding: 15px 0;
-    margin-top: 0;
+    margin-bottom: 20px;
+    color: var(--primary-color);
 }
 
-label {
+/* ============================
+   Form Elements
+============================ */
+form label {
     display: block;
-    margin-top: 15px;
+    margin-bottom: 5px;
     font-weight: bold;
 }
 
-select,
-input[type="date"],
-input[type="text"],
-textarea {
+form input[type="text"],
+form input[type="date"],
+form select,
+form textarea {
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #bbb;
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--input-border);
     border-radius: 4px;
+    background-color: var(--input-bg);
     font-size: 14px;
+    font-family: inherit;
 }
 
-.small-label {
-    margin-top: 20px;
-    font-weight: bold;
+form input[type="text"]:focus,
+form input[type="date"]:focus,
+form select:focus,
+form textarea:focus {
+    border-color: var(--input-focus-border);
+    outline: none;
 }
 
-.optional {
-    font-size: 12px;
-    color: #555;
-}
-
-.checkbox-group label {
-    display: block;
-    margin-top: 8px;
-    font-size: 15px;
-}
-
+/* ============================
+   Rating Stars
+============================ */
 .rating {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px; /* space between stars */
-    margin-top: 10px;
-}
-.rating {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px; /* space between stars */
-    margin-top: 10px;
+    flex-direction: row; /* left-aligned */
+    justify-content: flex-start; /* left alignment */
+    margin-bottom: 20px;
 }
 
-.rating input {
+.rating input[type="radio"] {
     display: none;
 }
 
 .rating label {
-    font-size: 25px;
+    font-size: 24px;
+    color: #ccc;
     cursor: pointer;
-    color: #999;
+    margin-right: 5px;
+    transition: color 0.2s;
 }
 
-.rating input:checked ~ label {
-    color: gold;
+.rating input[type="radio"]:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+    color: var(--secondary-color);
 }
 
+/* ============================
+   Checkbox Group
+============================ */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
 
+.checkbox-group label {
+    font-weight: normal;
+    margin-bottom: 5px;
+}
 
+.small-label {
+    font-size: 12px;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+.optional {
+    font-weight: normal;
+    color: var(--optional-color);
+    font-size: 12px;
+}
+
+/* ============================
+   Textarea
+============================ */
+textarea {
+    resize: vertical;
+}
+
+/* ============================
+   Submit Button
+============================ */
 .submit-btn {
     width: 100%;
-    margin-top: 20px;
-    background-color: #ddd;
-    padding: 12px;
+    padding: 10px;
+    background-color: var(--secondary-color);
+    color: #fff;
     border: none;
+    border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 4px;
+    margin-top: 10px; /* ensures button is below stars and other inputs */
+    transition: background-color 0.2s;
 }
 
 .submit-btn:hover {
-    background-color: #c9c9c9;
+    background-color: blue;
+}
+
+/* ============================
+   Footer
+============================ */
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--optional-color);
+}
+
+/* ============================
+   Responsive
+============================ */
+@media (max-width: 480px) {
+    .form-container {
+        padding: 15px;
+    }
+
+    .rating label {
+        font-size: 20px;
+    }
+
+    .submit-btn {
+        font-size: 14px;
+        padding: 8px;
+    }
 }

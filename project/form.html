@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Review</title>
     <link rel="stylesheet" href="../styles/form.css">
-    <script src="../scripts/project.js"></script>
-    
+    <script src="../scripts/project.js" defer></script>
 </head>
 
 <body>
@@ -32,20 +31,20 @@
             <!-- Rating -->
             <label>Overall Rating</label>
             <div class="rating">
-                <input type="radio" id="star1" name="rating" value="1" required>
-                <label for="star1">★</label>
-
-                <input type="radio" id="star2" name="rating" value="2">
-                <label for="star2">★</label>
-
-                <input type="radio" id="star3" name="rating" value="3">
-                <label for="star3">★</label>
+                <input type="radio" id="star5" name="rating" value="5" required>
+                <label for="star5">★</label>
 
                 <input type="radio" id="star4" name="rating" value="4">
                 <label for="star4">★</label>
 
-                <input type="radio" id="star5" name="rating" value="5">
-                <label for="star5">★</label>
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star3">★</label>
+
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star2">★</label>
+
+                <input type="radio" id="star1" name="rating" value="1">
+                <label for="star1">★</label>
             </div>
 
             <!-- Date -->
@@ -76,18 +75,21 @@
             <button type="submit" class="submit-btn">Post Review</button>
 
         </form>
-<footer>
-<p>&copy; <span id="currentYear"></span> Melinda Competente, Philippines</p>
- <p>Last modification: <span id="lastModified"></span></p>
-</footer>
 
- <script>
-document.addEventListener("DOMContentLoaded", function() {
- document.getElementById("currentYear").textContent = new Date().getFullYear();
- document.getElementById("lastModified").textContent = new Date(document.lastModified).toLocaleString();
-});
-  </script>
+        <!-- Footer moved outside form -->
+        <footer>
+            <p>&copy; <span id="currentYear"></span> Melinda Competente, Philippines</p>
+            <p>Last modification: <span id="lastModified"></span></p>
+        </footer>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                document.getElementById("currentYear").textContent = new Date().getFullYear();
+                document.getElementById("lastModified").textContent = new Date(document.lastModified).toLocaleString();
+            });
+        </script>
 
     </div>
+
 </body>
 </html>
