@@ -1,149 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Character encoding -->
-    <meta charset="utf-8">
-
-    <!-- Viewport for responsive design -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Page description and author -->
-    <meta name="description" content="Submit your review and rate the services including accommodations, dining, activities, and guest experiences.">
-    <meta name="author" content="Melinda Competente">
-
-    <!-- Page title -->
-    <title>Service Review Form - Melinda P. Competente</title>
-
-    <!-- CSS stylesheets -->
-    <link href="../styles/form.css" rel="stylesheet">
-    <link href="../styles/project_large.css" rel="stylesheet">
-    <link href="../styles/project-home.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <!-- JavaScript (external deferred script) -->
-    <script src="../scripts/project.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review</title>
+    <link rel="stylesheet" href="../styles/form.css">
+    <script src="../scripts/project.js"></script>
+    
 </head>
 
 <body>
 
-    <header>
-        <nav class="topnav2" aria-label="Main Navigation">
-            <a class="active" href="../project/project_home.html">Home</a>
-            <a class="prod" href="../project/form.html">Services</a>
-            <a href="../project/project_contactus.html">Contact</a>
-            <a href="../project/siteplan.html">Site Plan</a>
-        </nav>
-    </header>
+    <div class="form-container">
 
-    <div class="header_1">
-        <h1>Service Review</h1>
-    </div>
+        <h2 class="form-title">Product Review</h2>
 
-    <main>
-        <div class="body_1">
+        <form>
 
-            <!-- dynamic product output -->
-            <p id="productName"></p>
+            <!-- Product Name -->
+            <label for="product">Product Name</label>
+            <select id="product" name="product" required>
+                <option value="" disabled selected>Select a Product ...</option>
+                <option value="p1">Accomodation</option>
+                <option value="p2">Dining</option>
+                <option value="p3">Recreation and activities</option>
+                <option value="p4">Event and conference activities</option>
+                <option value="p5">SPA and wellness</option>
+                <option value="p6">Kids club</option>
+            </select>
 
-            <form action="review.html" method="get">
+            <!-- Rating -->
+            <label>Overall Rating</label>
+            <div class="rating">
+                <input type="radio" id="star1" name="rating" value="1" required>
+                <label for="star1">★</label>
 
-                <h4>Services Offered</h4>
-                <div class="form-inline">
-                    <label for="product">Choose a Service:</label>
-                    <select class="phil-product" id="product" name="product" required>
-                        <option value="" disabled selected>Select a Service...</option>
-                        <option value="AC">Accommodation</option>
-                        <option value="D">Dining</option>
-                        <option value="RA">Recreation and Activities</option>
-                        <option value="E">Event and Conference Activities</option>
-                        <option value="SW">Spa and Wellness</option>
-                        <option value="K">Kids Clubs</option>
-                        <option value="C">Concierge</option>
-                        <option value="GS">Guest Services</option>
-                        <option value="FP">Food Processor</option>
-                        <option value="RS">Retail and Shops</option>
-                        <option value="ES">Environmental and Cultural Services</option>
-                        <option value="TS">Transportation Services</option>
-                        <option value="LA">Local Area Shuttle</option>
-                        <option value="PS">Pet Services</option>
-                        <option value="Bike">Bicycle Rentals</option>
-                        <option value="Transpo">Public Transportation Information</option>
-                        <option value="Elec">Electric Vehicle Charging Stations</option>
-                        <option value="P">Private Car Service</option>
-                    </select>
-                </div>
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star2">★</label>
 
-                <h4>Overall Rating</h4>
-               <fieldset class="rating">
-    <legend>:Rate the Service</legend>
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star3">★</label>
 
-    <input type="radio" id="star5" name="rating" value="5" required>
-    <label for="star5" class="fa fa-star">
-        <span class="sr-only">5 stars</span>
-    </label>
+                <input type="radio" id="star4" name="rating" value="4">
+                <label for="star4">★</label>
 
-    <input type="radio" id="star4" name="rating" value="4">
-    <label for="star4" class="fa fa-star">
-        <span class="sr-only">4 stars</span>
-    </label>
+                <input type="radio" id="star5" name="rating" value="5">
+                <label for="star5">★</label>
+            </div>
 
-    <input type="radio" id="star3" name="rating" value="3">
-    <label for="star3" class="fa fa-star">
-        <span class="sr-only">3 stars</span>
-    </label>
+            <!-- Date -->
+            <label for="date">Date of Installation</label>
+            <input type="date" id="date" name="install_date" required>
 
-    <input type="radio" id="star2" name="rating" value="2">
-    <label for="star2" class="fa fa-star">
-        <span class="sr-only">2 stars</span>
-    </label>
+            <!-- Checkboxes -->
+            <p class="small-label">Which features did you find useful in the product? <br>
+                <span class="optional">(Check all that apply)</span>
+            </p>
 
-    <input type="radio" id="star1" name="rating" value="1">
-    <label for="star1" class="fa fa-star">
-        <span class="sr-only">1 star</span>
-    </label>
-</fieldset>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="feature" value="Durability"> Durability</label>
+                <label><input type="checkbox" name="feature" value="Ease"> Ease of Use</label>
+                <label><input type="checkbox" name="feature" value="Performance"> Performance</label>
+                <label><input type="checkbox" name="feature" value="Design"> Design</label>
+            </div>
 
-                <h4>Service Review Date</h4>
-                <div class="form-inline">
-                    <label for="date">Date of Your Visit:</label>
-                    <input type="date" id="date" name="date" min="2022-01-01" max="2025-12-31" required>
-                </div>
+            <!-- Written Review -->
+            <label for="review">Written Review <span class="optional">(Optional)</span></label>
+            <textarea id="review" rows="4"></textarea>
 
-                <h4>Useful Features (Check all that apply)</h4>
-                <label><input type="checkbox" name="features[]" value="location"> Location and Setting</label><br>
-                <label><input type="checkbox" name="features[]" value="experience"> Guest Experience</label><br>
-                <label><input type="checkbox" name="features[]" value="performance"> Performance</label><br>
-                <label><input type="checkbox" name="features[]" value="facilities"> Facilities and Infrastructure</label><br>
+            <!-- Name -->
+            <label for="name">Your Name <span class="optional">(Optional)</span></label>
+            <input type="text" id="name">
 
-                <h4>Written Review (Optional)</h4>
-                <label for="comment">Your Review:</label>
-                <textarea id="comment" name="comment" rows="5" placeholder="Write your comment here..."></textarea>
+            <!-- Submit -->
+            <button type="submit" class="submit-btn">Post Review</button>
 
-                <h4>Your Name (Optional)</h4>
-                <div class="form-inline">
-                    <label for="name">Full Name:</label>
-                    <input type="text" id="name" name="name" maxlength="50" placeholder="Enter your name...">
-                </div>
+        </form>
+<footer>
+<p>&copy; <span id="currentYear"></span> Melinda Competente, Philippines</p>
+ <p>Last modification: <span id="lastModified"></span></p>
+</footer>
 
-                <button type="submit" class="button1">Post review</button>
-
-            </form>
-        </div>
-    </main>
-
-    <footer>
-        <p>&copy; <span id="currentYear"></span> Melinda Competente, Philippines</p>
-        <p>Last modification: <span id="lastModified"></span></p>
-    </footer>
-
-    <script src="../scripts/project.js" defer></script>
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      document.getElementById("currentYear").textContent = new Date().getFullYear();
-      document.getElementById("lastModified").textContent = new Date(document.lastModified).toLocaleString();
-    });
+ <script>
+document.addEventListener("DOMContentLoaded", function() {
+ document.getElementById("currentYear").textContent = new Date().getFullYear();
+ document.getElementById("lastModified").textContent = new Date(document.lastModified).toLocaleString();
+});
   </script>
-</body>
 
+    </div>
+</body>
 </html>

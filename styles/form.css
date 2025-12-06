@@ -1,212 +1,93 @@
-/* ============================
-   Global Styles
-============================ */
-:root {
-    --primary-color: #222;
-    --white: #ffffff;
-}
-
 body {
-    font-family: 'Roboto', 'Open Sans', sans-serif;
-    background-color: rgb(127, 130, 129);
+    background-color: #d0d5d9;
+    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 20px;
 }
 
-/* ============================
-   Headings
-============================ */
-h2 {
-    text-align: center;
-}
-
-h4 {
-    display: block;
-    margin: 1.33em 0;
-    font-weight: bold;
-    unicode-bidi: isolate;
-    font-size: 20px;
-}
-
-/* ============================
-   Navigation
-============================ */
-.topnav2 {
-    overflow: hidden;
-    background-color: #333;
-}
-
-.topnav2 a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 20px;
-    transition: color 0.2s ease;
-}
-
-.topnav2 a:hover {
-    color: #d66666;
-}
-
-.topnav2 a.prod {
-    background-color: rgba(16, 232, 109, 1);
-    color: white;
-}
-
-/* ============================
-   Header Section
-============================ */
-.header_1 {
-    background-color: rgb(33, 30, 32);
-    color: white;
-    text-align: center;
-    height: 60px;
-    line-height: 60px;
-}
-
-/* ============================
-   Body Section
-============================ */
-.body_1 {
-    background-color: gray;
-    min-height: 1000px;
-    padding: 10px;
-    margin-top: 20px;
-}
-
-/* ============================
-   Dynamic Product Output
-============================ */
-#productName {
-    font-weight: bold;
-}
-
-/* ============================
-   Dropdown (Product List)
-============================ */
-.phil-product {
-    width: 100%;
-    max-width: 300px;
+.form-container {
+    width: 350px;
+    margin: auto;
+    background-color: #e2e2ed;
+    padding: 20px;
     border-radius: 6px;
-    padding: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
 }
 
-/* ============================
-   Rating Stars
-============================ */
+.form-title {
+    text-align: center;
+    background-color: #111;
+    color: white;
+    padding: 15px 0;
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+select,
+input[type="date"],
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.small-label {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.optional {
+    font-size: 12px;
+    color: #555;
+}
+
+.checkbox-group label {
+    display: block;
+    margin-top: 8px;
+    font-size: 15px;
+}
+
 .rating {
-    direction: rtl;
-    unicode-bidi: bidi-override;
-    font-size: 20px;
     display: flex;
-    justify-content:left;
-    margin-top: 10px;
+    flex-direction: row;
     align-items: center;
-    gap: 10px;
-    border: none;
-    margin: 0%;
-    padding-left: 0px;
-    
-    
+    gap: 10px; /* space between stars */
+    margin-top: 10px;
 }
 
-.rating input[type="radio"] {
+.rating input {
     display: none;
 }
 
 .rating label {
-    color: #e0e0e0;
+    font-size: 25px;
     cursor: pointer;
-    transition: color 0.25s ease;
-    margin-left: 0%;
+    color: #999;
 }
 
-.rating label:hover,
-.rating label:hover ~ label {
-    color: #ffcf0f;
+.rating input:checked ~ label {
+    color: gold;
 }
 
-.rating input[type="radio"]:checked ~ label {
-    color: #ffcf0f;
-}
-
-/* ============================
-   Forms
-============================ */
-form {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-}
-
-label {
-    margin-bottom: 5px;
-    font-size: medium;
-}
-
-/* ============================
-   Input Fields
-============================ */
-input[type="text"],
-input[type="date"] {
+.submit-btn {
     width: 100%;
-    max-width: 300px;
-    height: 35px;
-    border-radius: 6px;
-    padding: 9px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    font-size: 16px;
-}
-
-/* ============================
-   Buttons
-============================ */
-button {
-    width: 150px;
-    height: 40px;
-    padding: 10px 20px;
-    background-color: #91ee94;
-    color: white;
+    margin-top: 20px;
+    background-color: #ddd;
+    padding: 12px;
     border: none;
-    border-radius: 8px;
+    font-size: 16px;
     cursor: pointer;
-    font-size: 18px;
-    margin-top: 10px;
-    transition: background-color 0.25s ease;
+    border-radius: 4px;
 }
 
-button:hover {
-    background-color: #45a049;
-}
-
-/* Secondary Gray Button */
-.button1 {
-    background-color: rgb(171, 168, 168);
-    border-radius: 8px;
-    color: black;
-}
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-}
-footer {
-  background-color: #666666;
-  padding: 10px;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #FFFFFF;
+.submit-btn:hover {
+    background-color: #c9c9c9;
 }
