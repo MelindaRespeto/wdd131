@@ -2,91 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Discover the Mayon Volcano form, including visitor facilities, trail routes, and hazard zones."> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <meta name="author" content="Melinda Competente">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Review</title>
-    <link rel="stylesheet" href="../styles/form.css">
-    <script src="../scripts/project.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-    <div class="form-container">
+<header>
+    <h1>Product Review Form</h1>
+</header>
 
-        <h2 class="form-title">Product Review</h2>
+<form method="get" action="review.html">
+    <fieldset class="rating">
+        <legend>Rate the Service:</legend>
+        <input type="radio" id="star5" name="rating" value="5" required>
+        <label for="star5" class="fa fa-star" aria-label="5 stars"></label>
 
-        <form>
+        <input type="radio" id="star4" name="rating" value="4" required>
+        <label for="star4" class="fa fa-star" aria-label="4 stars"></label>
 
-            <!-- Product Name -->
-            <label for="product">Product Name</label>
-            <select id="product" name="product" required>
-                <option value="" disabled selected>Select a Product ...</option>
-                <option value="p1">Accomodation</option>
-                <option value="p2">Dining</option>
-                <option value="p3">Recreation and activities</option>
-                <option value="p4">Event and conference activities</option>
-                <option value="p5">SPA and wellness</option>
-                <option value="p6">Kids club</option>
-            </select>
+        <input type="radio" id="star3" name="rating" value="3" required>
+        <label for="star3" class="fa fa-star" aria-label="3 stars"></label>
 
-            <!-- Rating -->
-            <label>Overall Rating</label>
-            <div class="rating">
-                <input type="radio" id="star5" name="rating" value="5" required>
-                <label for="star5">★</label>
+        <input type="radio" id="star2" name="rating" value="2" required>
+        <label for="star2" class="fa fa-star" aria-label="2 stars"></label>
 
-                <input type="radio" id="star4" name="rating" value="4">
-                <label for="star4">★</label>
+        <input type="radio" id="star1" name="rating" value="1" required>
+        <label for="star1" class="fa fa-star" aria-label="1 star"></label>
+    </fieldset>
 
-                <input type="radio" id="star3" name="rating" value="3">
-                <label for="star3">★</label>
+    <label for="review-text">Your Review:</label>
+    <textarea id="review-text" name="review" rows="4" cols="50"></textarea>
 
-                <input type="radio" id="star2" name="rating" value="2">
-                <label for="star2">★</label>
+    <fieldset class="features">
+        <legend>Features Used:</legend>
+        <input type="checkbox" id="feature1" name="feature" value="Feature A">
+        <label for="feature1">Feature A</label>
 
-                <input type="radio" id="star1" name="rating" value="1">
-                <label for="star1">★</label>
-            </div>
+        <input type="checkbox" id="feature2" name="feature" value="Feature B">
+        <label for="feature2">Feature B</label>
 
-            <!-- Date -->
-            <label for="date">Date of Installation</label>
-            <input type="date" id="date" name="install_date" required>
+        <input type="checkbox" id="feature3" name="feature" value="Feature C">
+        <label for="feature3">Feature C</label>
 
-            <!-- Checkboxes -->
-            <p class="small-label">Which features did you find useful in the product? <br>
-                <span class="optional">(Check all that apply)</span>
-            </p>
+        <input type="checkbox" id="feature4" name="feature" value="Feature D">
+        <label for="feature4">Feature D</label>
+    </fieldset>
 
-            <div class="checkbox-group">
-                <label><input type="checkbox" name="feature" value="Durability"> Durability</label>
-                <label><input type="checkbox" name="feature" value="Ease"> Ease of Use</label>
-                <label><input type="checkbox" name="feature" value="Performance"> Performance</label>
-                <label><input type="checkbox" name="feature" value="Design"> Design</label>
-            </div>
+    <button type="submit">Submit Review</button>
+</form>
 
-            <!-- Written Review -->
-            <label for="review">Written Review <span class="optional">(Optional)</span></label>
-            <textarea id="review" rows="4"></textarea>
-
-            <!-- Name -->
-            <label for="name">Your Name <span class="optional">(Optional)</span></label>
-            <input type="text" id="name">
-
-            <!-- Submit -->
-            <button type="submit" class="submit-btn">Post Review</button>
-
-        </form>
-
-        <!-- Footer moved outside form -->
-        <footer>
-            <p>&copy; <span id="currentYear"></span> Melinda Competente, Philippines</p>
-            <p>Last modification: <span id="lastModified"></span></p>
-        </footer>
-
-        
-
-    </div>
+<footer>
+    <p>&copy; 2025 Melinda Competente. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
