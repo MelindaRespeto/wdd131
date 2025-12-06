@@ -1,53 +1,49 @@
 @media screen and (min-width: 600px) {
-    nav, article {
-      width: 100%;
-      height: auto;
-    }
-
-    .pic_Container {
-      width: auto;
-      height: 400px;
-      align-content: center;
-    }
-    img {
-      width: 450px;
-      height: 450px;
-    }
-    .img1, .img2 {
-      display: flex;
-      height: auto;
-      justify-content: space-around;
-      background-color: #afabab;
-      align-items: center;
-      height: 100px;
-      color: #242424;
-      position: relative;
-      
-   .logo img {
-     width: 100px;     /* recommended width */
-     height: auto;     /* keeps proportions correct */
-     max-height: 70px; /* recommended height limit */
-     display: block;
-  }   
-      
-     
+  nav, article {
+    width: 100%;
+    height: auto;
   }
+
+  .pic_Container {
+    width: auto;
+    height: 400px;
+    align-content: center;
+  }
+
+  img {
+    width: 450px;
+    height: 450px;
+  }
+
+  .img1, .img2 {
+    display: flex;
+    justify-content: space-around;
+    background-color: #afabab;
+    align-items: center;
+    height: 100px;
+    color: #242424;
+    position: relative;
+  }
+
+  /* Flattened .logo img */
+  .logo img {
+    width: 100px;       /* recommended width */
+    height: auto;       /* keeps proportions correct */
+    max-height: 70px;   /* recommended height limit */
+    display: block;
+  }
+
   .pic1, .pic2 {
-    position:relative;
+    position: relative;
     top: 0px;
-    transition:width 1s;
+    transition: width 1s;
   }
 
   .pic1:hover, .pic2:hover {
-     width: 500px;
-      
+    width: 500px;
   }
 
   footer p {
     text-align: center;
   }
-
-
-
-  }
-  
+}
