@@ -12,21 +12,20 @@
 
 <body>
     <header>
-    <h1>Product Review Form</h1>
+        <h1>Product Review Form</h1>
     </header>
-    <form method="get" action="review.html"></form>
 
     <div class="form-container">
 
         <h2 class="form-title">Product Review</h2>
 
-        <form>
+        <form method="get" action="review.html">
 
             <!-- Product Name -->
             <label for="product">Product Name</label>
             <select id="product" name="product" required>
                 <option value="" disabled selected>Select a Product ...</option>
-                <option value="p1">Accomodation</option>
+                <option value="p1">Accommodation</option>
                 <option value="p2">Dining</option>
                 <option value="p3">Recreation and activities</option>
                 <option value="p4">Event and conference activities</option>
@@ -58,31 +57,31 @@
             <input type="date" id="date" name="install_date" required>
 
             <!-- Checkboxes -->
-<p class="small-label">Which features did you find useful in the product? <br>
-    <span class="optional">(Check all that apply)</span>
-</p>
+            <p class="small-label">Which features did you find useful in the product? <br>
+                <span class="optional">(Check all that apply)</span>
+            </p>
 
-<div class="checkbox-group">
-    <div class="checkbox-item">
-        <input type="checkbox" id="feature1" name="feature" value="Durability">
-        <label for="feature1">Durability</label>
-    </div>
+            <div class="checkbox-group">
+                <div class="checkbox-item">
+                    <input type="checkbox" id="feature1" name="feature" value="Durability">
+                    <label for="feature1">Durability</label>
+                </div>
 
-    <div class="checkbox-item">
-        <input type="checkbox" id="feature2" name="feature" value="Ease">
-        <label for="feature2">Ease of Use</label>
-    </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="feature2" name="feature" value="Ease">
+                    <label for="feature2">Ease of Use</label>
+                </div>
 
-    <div class="checkbox-item">
-        <input type="checkbox" id="feature3" name="feature" value="Performance">
-        <label for="feature3">Performance</label>
-    </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="feature3" name="feature" value="Performance">
+                    <label for="feature3">Performance</label>
+                </div>
 
-    <div class="checkbox-item">
-        <input type="checkbox" id="feature4" name="feature" value="Design">
-        <label for="feature4">Design</label>
-    </div>
-</div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="feature4" name="feature" value="Design">
+                    <label for="feature4">Design</label>
+                </div>
+            </div>
 
             <!-- Written Review -->
             <label for="review">Written Review <span class="optional">(Optional)</span></label>
@@ -97,13 +96,11 @@
 
         </form>
 
-        <!-- Footer moved outside form -->
+        <!-- Footer -->
         <footer>
             <p>&copy; <span id="currentYear"></span> Melinda Competente, Philippines</p>
             <p>Last modification: <span id="lastModified"></span></p>
         </footer>
-
-        
 
     </div>
 
