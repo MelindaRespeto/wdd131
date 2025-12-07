@@ -109,9 +109,16 @@ form textarea:focus {
 ============================ */
 .checkbox-group {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin-bottom: 15px;
+    margin-top: 8px;
+    gap:15px
 }
+
+.checkbox-item {
+    margin-bottom: 6px; /* space between checkboxes */
+}
+
 
 .checkbox-group label {
     font-weight: normal;

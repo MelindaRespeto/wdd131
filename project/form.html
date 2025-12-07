@@ -11,6 +11,10 @@
 </head>
 
 <body>
+    <header>
+    <h1>Product Review Form</h1>
+    </header>
+    <form method="get" action="review.html"></form>
 
     <div class="form-container">
 
@@ -36,16 +40,16 @@
                 <input type="radio" id="star5" name="rating" value="5" required>
                 <label for="star5">★</label>
 
-                <input type="radio" id="star4" name="rating" value="4">
+                <input type="radio" id="star4" name="rating" value="4" required>
                 <label for="star4">★</label>
 
-                <input type="radio" id="star3" name="rating" value="3">
+                <input type="radio" id="star3" name="rating" value="3" required>
                 <label for="star3">★</label>
 
-                <input type="radio" id="star2" name="rating" value="2">
+                <input type="radio" id="star2" name="rating" value="2" required>
                 <label for="star2">★</label>
 
-                <input type="radio" id="star1" name="rating" value="1">
+                <input type="radio" id="star1" name="rating" value="1" required>
                 <label for="star1">★</label>
             </div>
 
@@ -54,16 +58,31 @@
             <input type="date" id="date" name="install_date" required>
 
             <!-- Checkboxes -->
-            <p class="small-label">Which features did you find useful in the product? <br>
-                <span class="optional">(Check all that apply)</span>
-            </p>
+<p class="small-label">Which features did you find useful in the product? <br>
+    <span class="optional">(Check all that apply)</span>
+</p>
 
-            <div class="checkbox-group">
-                <label><input type="checkbox" name="feature" value="Durability"> Durability</label>
-                <label><input type="checkbox" name="feature" value="Ease"> Ease of Use</label>
-                <label><input type="checkbox" name="feature" value="Performance"> Performance</label>
-                <label><input type="checkbox" name="feature" value="Design"> Design</label>
-            </div>
+<div class="checkbox-group">
+    <div class="checkbox-item">
+        <input type="checkbox" id="feature1" name="feature" value="Durability">
+        <label for="feature1">Durability</label>
+    </div>
+
+    <div class="checkbox-item">
+        <input type="checkbox" id="feature2" name="feature" value="Ease">
+        <label for="feature2">Ease of Use</label>
+    </div>
+
+    <div class="checkbox-item">
+        <input type="checkbox" id="feature3" name="feature" value="Performance">
+        <label for="feature3">Performance</label>
+    </div>
+
+    <div class="checkbox-item">
+        <input type="checkbox" id="feature4" name="feature" value="Design">
+        <label for="feature4">Design</label>
+    </div>
+</div>
 
             <!-- Written Review -->
             <label for="review">Written Review <span class="optional">(Optional)</span></label>
