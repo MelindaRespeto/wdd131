@@ -2,9 +2,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector("form");
 
-console.log(JSON.parse(localStorage.getItem("reviewFormData")));
-
-
     // Get all input elements
     const productSelect = document.getElementById("product");
     const ratingInputs = document.querySelectorAll('input[name="rating"]');
@@ -35,6 +32,9 @@ console.log(JSON.parse(localStorage.getItem("reviewFormData")));
         }
     }
 
+    // Optional: Log current saved data
+    console.log("Saved localStorage data:", savedData);
+
     // Save data to localStorage on submit
     form.addEventListener("submit", (e) => {
         e.preventDefault(); // Prevent form submission to server
@@ -54,10 +54,16 @@ console.log(JSON.parse(localStorage.getItem("reviewFormData")));
         };
 
         localStorage.setItem("reviewFormData", JSON.stringify(formData));
+
+        // Debug log to check saving
+        console.log("Saved form data:", formData);
+
         alert("Your review has been saved locally!");
     });
 
     // Update footer
-    document.getElementById("currentYear").textContent = new Date().getFullYear();
-    document.getElementById("lastModified").textContent = document.lastModified;
+    const yearEl = document.getElementById("currentYear");
+    const modifiedEl = document.getElementById("lastModified");
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+    if (modifiedEl) modifiedEl.textContent = document.lastModified;
 });
