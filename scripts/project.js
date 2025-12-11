@@ -2,6 +2,9 @@
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector("form");
 
+console.log(JSON.parse(localStorage.getItem("reviewFormData")));
+
+
     // Get all input elements
     const productSelect = document.getElementById("product");
     const ratingInputs = document.querySelectorAll('input[name="rating"]');
