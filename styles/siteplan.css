@@ -12,11 +12,12 @@
 /* Base / body */
 body {
   font-family: 'Roboto', 'Open Sans', sans-serif; /* fallback generic font added */ 
-  background-color: #7F8281; /* same as rgb(127,130,129) but explicit hex */
+  background-color: #5e5f5f; /* same as rgb(127,130,129) but explicit hex */
   color: #000000; /* default text color — ensures readability on background */
   line-height: 1.5; /* improved line height for readability */
   margin: 0;
   padding: 0;
+ 
 }
 
 /* Headings */
