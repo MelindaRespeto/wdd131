@@ -3,93 +3,61 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- Meta description and author -->
 <meta name="description" content="Get in touch with us for inquiries, feedback, or support regarding our services.">
 <meta name="author" content="Melinda Competente">
-<title>Contact Us</title>
-<link rel="stylesheet" href="../styles/project.css">  
+<title>Contact Us - Mayon Volcano</title>
+
+<link rel="stylesheet" href="../styles/project.css">
+<link rel="stylesheet" href="../styles/contact.css">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <!-- NAVIGATION -->
-    <nav>
-        <div class="topnav">
-            <a class="active" href="../project/project_home.html">Home</a>
-            <a href="../project/form.html">Services</a>
-            <a class="contactbut" href="../project/project_contactus.html">Contact</a>
-            <a href="../project/siteplan.html">Site Plan</a>
-        </div>
-    </nav>
 
-    <!-- HEADER / LOGO + HERO MESSAGE -->
-    <header id="logo">
-        <img src="../images/jomel.jpg" alt="People enjoying activities near Mayon Volcano">
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
-        <section id="hero-msg">
-            <h1 class="home-title">Be Happy and Stay Physically Healthy</h1>
-            <h4>Make Memories with Mayon Volcano</h4>
-        </section>
-    </header>
+<nav aria-label="Main navigation">
+    <div class="topnav">
+        <a href="../project/project_home.html">Home</a>
+        <a href="../project/form.html">Services</a>
+        <a class="contactbut" href="../project/project_contactus.html">Contact</a>
+        <a href="../project/siteplan.html">Site Plan</a>
+    </div>
+</nav>
 
-    <main>
-        <!-- Feedback Message -->
-        <div id="feedback" aria-live="polite"></div>
+<header>
+    <img src="../images/jomel.jpg" alt="People enjoying activities near Mayon Volcano">
+    <h1>Contact Us</h1>
+    <h4>We’d love to hear from you!</h4>
+</header>
 
-        <!-- CONTACT FORM -->
-        <form action="#" method="post" novalidate>
-            
-            <fieldset>
-                <legend>Contact Information</legend>
+<main id="main-content">
+    <div id="feedback" aria-live="polite"></div>
 
-                <div class="form-field">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="user_name" required>
-                </div>
+    <form action="#" method="post" novalidate>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="user_name" required>
 
-                <div class="form-field">
-                    <label for="mail">Email:</label>
-                    <input type="email" id="mail" name="user_email" required>
-                </div>
+        <label for="mail">Email:</label>
+        <input type="email" id="mail" name="user_email" required>
 
-                <div class="form-field">
-                    <label for="msg">Message:</label>
-                    <textarea id="msg" name="user_message" rows="5" required></textarea>
-                </div>
-            </fieldset>
+        <label for="msg">Message:</label>
+        <textarea id="msg" name="user_message" rows="5" required></textarea>
 
-            <button type="submit">Send</button>
-        </form>
+        <button type="submit">Send</button>
+    </form>
+</main>
 
-        <!-- JavaScript for feedback -->
-        <script>
-            const feedbackElement = document.getElementById('feedback');
-            const formElement = document.forms[0];
+<footer>
+    <p>&copy; <span id="currentYear"></span> Melinda Competente, Philippines</p>
+    <p>Last modification: <span id="lastModified"></span></p>
+</footer>
 
-            formElement.addEventListener('submit', function (e) {
-                e.preventDefault();
-
-                feedbackElement.textContent = 
-                  `Hello ${formElement.user_name.value}! Thank you for your message. We will get back to you soon.`;
-                
-                feedbackElement.style.display = "block";
-                document.body.classList.add('moveDown');
-            });
-        </script>
-    </main>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>&copy; <span id="currentYear"></span> Melinda Competente, Philippines</p>
-        <p>Last modification: <span id="lastModified"></span></p>
-
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                document.getElementById("currentYear").textContent = new Date().getFullYear();
-                document.getElementById("lastModified").textContent = new Date(document.lastModified).toLocaleString();
-            });
-        </script>
-    </footer>
+<!-- External JS -->
+<script src="../scripts/contact.js" defer></script>
 
 </body>
 </html>
