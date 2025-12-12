@@ -22,9 +22,9 @@
         </div>
     </nav>
 
-    <!-- HEADER / LOGO + MESSAGE -->
+    <!-- HEADER / LOGO + HERO MESSAGE -->
     <header id="logo">
-        <img src="../images/jomel.jpg" alt="People enjoying">
+        <img src="../images/jomel.jpg" alt="People enjoying activities near Mayon Volcano">
 
         <section id="hero-msg">
             <h1 class="home-title">Be Happy and Stay Physically Healthy</h1>
@@ -33,30 +33,35 @@
     </header>
 
     <main>
-        <div id="feedback"></div>
+        <!-- Feedback Message -->
+        <div id="feedback" aria-live="polite"></div>
 
         <!-- CONTACT FORM -->
-        <form action="/my-handling-form-page" method="post">
-            <ul>
-                <li>
+        <form action="#" method="post" novalidate>
+            
+            <fieldset>
+                <legend>Contact Information</legend>
+
+                <div class="form-field">
                     <label for="name">Name:</label>
-                    <input class="name" type="text" id="name" name="user_name" required>
-                </li>
+                    <input type="text" id="name" name="user_name" required>
+                </div>
 
-                <li>
+                <div class="form-field">
                     <label for="mail">Email:</label>
-                    <input class="mail" type="email" id="mail" name="user_email" required>
-                </li>
+                    <input type="email" id="mail" name="user_email" required>
+                </div>
 
-                <li>
+                <div class="form-field">
                     <label for="msg">Message:</label>
-                    <textarea class="msg" id="msg" name="user_message" required></textarea>
-                </li>
-            </ul>
+                    <textarea id="msg" name="user_message" rows="5" required></textarea>
+                </div>
+            </fieldset>
 
             <button type="submit">Send</button>
         </form>
 
+        <!-- JavaScript for feedback -->
         <script>
             const feedbackElement = document.getElementById('feedback');
             const formElement = document.forms[0];
@@ -64,8 +69,8 @@
             formElement.addEventListener('submit', function (e) {
                 e.preventDefault();
 
-                feedbackElement.innerHTML = 
-                  'Hello ' + formElement.user_name.value + '! Thank you for your message. We will get back to you soon!';
+                feedbackElement.textContent = 
+                  `Hello ${formElement.user_name.value}! Thank you for your message. We will get back to you soon.`;
                 
                 feedbackElement.style.display = "block";
                 document.body.classList.add('moveDown');
