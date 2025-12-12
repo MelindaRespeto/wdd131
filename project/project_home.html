@@ -1,89 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Explore the beauty, history, and culture of Mayon Volcano—one of the Philippines’ most iconic natural landmarks.">
+<meta name="author" content="Melinda Competente">
+<title>Mayon Volcano - Home</title>
 
-    <!-- Meta description and author -->
-    <meta name="description" content="Explore the beauty, history, and culture of Mayon Volcano—one of the Philippines’ most iconic natural landmarks.">
-    <meta name="author" content="Melinda Competente">
+<!-- CSS -->
+<link rel="stylesheet" href="../styles/project-home.css">
+<link rel="stylesheet" href="../styles/siteplan.css">
 
-    <title>Mayon Volcano - Home</title>
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="../styles/project-home.css">
-    <link rel="stylesheet" href="../styles/siteplan.css">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+/* Basic responsive enhancements */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+header, nav, main, footer {
+    width: 100%;
+}
+.topnav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #2ABC6E;
+}
+.topnav a {
+    padding: 12px 16px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    flex: 1;
+}
+.topnav a.active {
+    background-color: #10E86D;
+}
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+}
+header img {
+    max-width: 150px;
+    height: auto;
+    margin-right: 1rem;
+}
+#hero-msg {
+    max-width: 600px;
+}
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.left-section, .right-section {
+    flex: 1 1 300px;
+    margin: 1rem;
+}
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #2ABC6E;
+    color: white;
+}
+@media (max-width: 768px) {
+    header img {
+        margin-bottom: 1rem;
+        margin-right: 0;
+    }
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+</style>
 
 </head>
-
 <body>
-    <!-- Skip link for keyboard users -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- NAVIGATION -->
-    <nav aria-label="Main navigation">
-        <div class="topnav">
-            <a class="active" href="project_home.html">Home</a>
-            <a href="../project/form.html">Services</a>
-            <a href="../project/project_contactus.html">Contact</a>
-            <a href="../project/siteplan.html">Site Plan</a>
-        </div>
-    </nav>
+<!-- Skip link -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- HEADER / HERO -->
-    <header>
-        <a href="project_home.html" class="logo" aria-label="Mayon Volcano Home">
-            <img src="../images/mylogo.jpg" alt="Logo of Mayon Volcano">
-        </a>
+<!-- NAVIGATION -->
+<nav aria-label="Main navigation">
+    <div class="topnav">
+        <a class="active" href="project_home.html">Home</a>
+        <a href="../project/form.html">Services</a>
+        <a href="../project/project_contactus.html">Contact</a>
+        <a href="../project/siteplan.html">Site Plan</a>
+    </div>
+</nav>
 
-        <section id="hero-msg" aria-labelledby="hero-title">
-            <h1 id="hero-title">Welcome to Mayon Volcano</h1>
-            <p>Explore the beauty, history, and culture of one of the Philippines’ most iconic landmarks.</p>
-        </section>
-    </header>
+<!-- HEADER -->
+<header>
+    <img src="../images/mylogo.jpg" alt="Mayon Volcano Logo">
+    <div id="hero-msg">
+        <h1>Welcome to Mayon Volcano</h1>
+        <p>Explore the beauty, history, and culture of one of the Philippines’ most iconic landmarks.</p>
+    </div>
+</header>
 
-    <!-- MAIN CONTENT -->
-    <main id="main-content">
-        <div class="main-container">
-            <section class="left-section" aria-labelledby="mayon-info">
-                <h2 id="mayon-info">Mayon Volcano</h2>
-                <p>
-                    Located in the Bicol Region, famous for its perfect cone shape.
-                    It is one of the most active volcanoes in the Philippines, with over 50 eruptions recorded since 1616.
-                    Despite its volcanic activity, Mayon remains a popular tourist destination offering scenic views,
-                    local culture, and adventure activities like ATV tours.
-                </p>
-            </section>
+<!-- MAIN CONTENT -->
+<main id="main-content" class="main-container">
+    <section class="left-section">
+        <h2>Mayon Volcano</h2>
+        <p>
+            Located in the Bicol Region, famous for its perfect cone shape.
+            It is one of the most active volcanoes in the Philippines, with over 50 eruptions recorded since 1616.
+            Despite its volcanic activity, Mayon remains a popular tourist destination offering scenic views,
+            local culture, and adventure activities like ATV tours.
+        </p>
+    </section>
 
-            <section class="right-section" aria-labelledby="tourist-highlights">
-                <h2 id="tourist-highlights">Tourist Highlights</h2>
-                <ul>
-                    <li>Scenic viewpoints for photography</li>
-                    <li>Hiking and trekking tours</li>
-                    <li>Local festivals and cultural events</li>
-                    <li>Nearby attractions in Albay</li>
-                </ul>
-            </section>
-        </div>
-    </main>
+    <section class="right-section">
+        <h2>Tourist Highlights</h2>
+        <ul>
+            <li>Scenic viewpoints for photography</li>
+            <li>Hiking and trekking tours</li>
+            <li>Local festivals and cultural events</li>
+            <li>Nearby attractions in Albay</li>
+        </ul>
+    </section>
+</main>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>&copy; <span id="currentYear"></span> Melinda Competente, Philippines</p>
-        <p>Last modification: <span id="lastModified"></span></p>
+<!-- FOOTER -->
+<footer>
+    <p>&copy; <span id="currentYear"></span> Melinda Competente, Philippines</p>
+    <p>Last modification: <span id="lastModified"></span></p>
+</footer>
 
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                document.getElementById("currentYear").textContent = new Date().getFullYear();
-                document.getElementById("lastModified").textContent =
-                    new Date(document.lastModified).toLocaleString();
-            });
-        </script>
-    </footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent =
+        new Date(document.lastModified).toLocaleString();
+});
+</script>
+
 </body>
 </html>
