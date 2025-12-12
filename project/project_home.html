@@ -53,3 +53,37 @@
             <section class="left-section" aria-labelledby="mayon-info">
                 <h2 id="mayon-info">Mayon Volcano</h2>
                 <p>
+                    Located in the Bicol Region, famous for its perfect cone shape.
+                    It is one of the most active volcanoes in the Philippines, with over 50 eruptions recorded since 1616.
+                    Despite its volcanic activity, Mayon remains a popular tourist destination offering scenic views,
+                    local culture, and adventure activities like ATV tours.
+                </p>
+            </section>
+
+            <section class="right-section" aria-labelledby="tourist-highlights">
+                <h2 id="tourist-highlights">Tourist Highlights</h2>
+                <ul>
+                    <li>Scenic viewpoints for photography</li>
+                    <li>Hiking and trekking tours</li>
+                    <li>Local festivals and cultural events</li>
+                    <li>Nearby attractions in Albay</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Melinda Competente, Philippines</p>
+        <p>Last modification: <span id="lastModified"></span></p>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                document.getElementById("currentYear").textContent = new Date().getFullYear();
+                document.getElementById("lastModified").textContent =
+                    new Date(document.lastModified).toLocaleString();
+            });
+        </script>
+    </footer>
+</body>
+</html>
