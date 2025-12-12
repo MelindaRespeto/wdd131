@@ -15,7 +15,7 @@
         <h1>Product Review Form</h1>
     </header>
 
-    <div class="form-container">
+    <main class="form-container">
 
         <h2 class="form-title">Product Review</h2>
         
@@ -35,20 +35,20 @@
 
             <!-- Rating -->
             <label>Overall Rating</label>
-            <div class="rating">
-                <input type="radio" id="star5" name="rating" value="5" required>
+            <div class="rating" role="radiogroup" aria-label="Overall product rating">
+                <input type="radio" id="star5" name="rating" value="5" required aria-label="5 stars">
                 <label for="star5">★</label>
 
-                <input type="radio" id="star4" name="rating" value="4" required>
+                <input type="radio" id="star4" name="rating" value="4" aria-label="4 stars">
                 <label for="star4">★</label>
 
-                <input type="radio" id="star3" name="rating" value="3" required>
+                <input type="radio" id="star3" name="rating" value="3" aria-label="3 stars">
                 <label for="star3">★</label>
 
-                <input type="radio" id="star2" name="rating" value="2" required>
+                <input type="radio" id="star2" name="rating" value="2" aria-label="2 stars">
                 <label for="star2">★</label>
 
-                <input type="radio" id="star1" name="rating" value="1" required>
+                <input type="radio" id="star1" name="rating" value="1" aria-label="1 star">
                 <label for="star1">★</label>
             </div>
 
@@ -61,7 +61,9 @@
                 <span class="optional">(Check all that apply)</span>
             </p>
 
-            <div class="checkbox-group">
+            <fieldset class="checkbox-group">
+                <legend class="sr-only">Product Features</legend>
+
                 <div class="checkbox-item">
                     <input type="checkbox" id="feature1" name="feature" value="Durability">
                     <label for="feature1">Durability</label>
@@ -81,7 +83,7 @@
                     <input type="checkbox" id="feature4" name="feature" value="Design">
                     <label for="feature4">Design</label>
                 </div>
-            </div>
+            </fieldset>
 
             <!-- Written Review -->
             <label for="review">Written Review <span class="optional">(Optional)</span></label>
@@ -89,20 +91,19 @@
 
             <!-- Name -->
             <label for="name">Your Name <span class="optional">(Optional)</span></label>
-            <input type="text" id="name">
+            <input type="text" id="name" name="user_name">
 
             <!-- Submit -->
             <button type="submit" class="submit-btn">Post Review</button>
 
         </form>
+    </main>
 
-        <!-- Footer -->
-        <footer>
-            <p>&copy; <span id="currentYear"></span> Melinda Competente, Philippines</p>
-            <p>Last modification: <span id="lastModified"></span></p>
-        </footer>
-
-    </div>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Melinda Competente, Philippines</p>
+        <p>Last modification: <span id="lastModified"></span></p>
+    </footer>
 
 </body>
 </html>
