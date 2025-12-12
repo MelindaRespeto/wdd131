@@ -4,17 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Required meta tags -->
+    <!-- Meta description and author -->
     <meta name="description" content="Explore the beauty, history, and culture of Mayon Volcano—one of the Philippines’ most iconic natural landmarks.">
     <meta name="author" content="Melinda Competente">
 
     <title>Mayon Volcano - Home</title>
-   
 
     <!-- CSS -->
     <link rel="stylesheet" href="../styles/project-home.css">
     <link rel="stylesheet" href="../styles/siteplan.css">
-    
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,9 +22,11 @@
 </head>
 
 <body>
+    <!-- Skip link for keyboard users -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- NAVIGATION -->
-    <nav>
+    <nav aria-label="Main navigation">
         <div class="topnav">
             <a class="active" href="project_home.html">Home</a>
             <a href="../project/form.html">Services</a>
@@ -37,54 +37,19 @@
 
     <!-- HEADER / HERO -->
     <header>
-        <a href="project_home.html" class="logo">
-            <img src="../images/mylogo.jpg" alt="Mayon Volcano Logo">
+        <a href="project_home.html" class="logo" aria-label="Mayon Volcano Home">
+            <img src="../images/mylogo.jpg" alt="Logo of Mayon Volcano">
         </a>
 
-        <div id="hero-msg">
-            <h1>Welcome to Mayon Volcano</h1>
+        <section id="hero-msg" aria-labelledby="hero-title">
+            <h1 id="hero-title">Welcome to Mayon Volcano</h1>
             <p>Explore the beauty, history, and culture of one of the Philippines’ most iconic landmarks.</p>
-        </div>
+        </section>
     </header>
 
     <!-- MAIN CONTENT -->
-    <main>
+    <main id="main-content">
         <div class="main-container">
-            <section class="left-section">
-                <h2>Mayon Volcano</h2>
+            <section class="left-section" aria-labelledby="mayon-info">
+                <h2 id="mayon-info">Mayon Volcano</h2>
                 <p>
-                    Located in the Bicol Region, famous for its perfect cone shape.
-                    It is one of the most active volcanoes in the Philippines, with over 50 eruptions recorded since 1616.
-                    Despite its volcanic activity, Mayon remains a popular tourist destination offering scenic views,
-                    local culture, and adventure activities like ATV tours.
-                </p>
-            </section>
-
-            <section class="right-section">
-                <h2>Tourist Highlights</h2>
-                <ul>
-                    <li>Scenic viewpoints for photography</li>
-                    <li>Hiking and trekking tours</li>
-                    <li>Local festivals and cultural events</li>
-                    <li>Nearby attractions in Albay</li>
-                </ul>
-            </section>
-        </div>
-    </main>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>&copy; <span id="currentYear"></span> Melinda Competente, Philippines</p>
-        <p>Last modification: <span id="lastModified"></span></p>
-
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                document.getElementById("currentYear").textContent = new Date().getFullYear();
-                document.getElementById("lastModified").textContent =
-                    new Date(document.lastModified).toLocaleString();
-            });
-        </script>
-    </footer>
-
-</body>
-</html>
